@@ -10,6 +10,7 @@ export default {
     extend: {},
     fontFamily: {
       zenKurenaido: ['Zen Kurenaido', 'sans-serif'],
+      kosugiMaru: ['Kosugi Maru', 'sans-serif'],
     }
   },
   plugins: [daisyui],

@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Zen+Kurenaido&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,11 +7,10 @@
 
 @layer base {
     html {
-        font-family: Proxima Nova, sans-serif;
+        font-family: Proxima Nova, system-ui, sans-serif;
     }
 }
 
 [tooltip-primary="mytooltipcolor"] .a {
     background-color: gray;
 }
-
