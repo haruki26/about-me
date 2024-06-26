@@ -1,4 +1,4 @@
-import CreateThumbnail from "./CreateThumbnails";
+import CreateThumbnail from "./CreateThumbnail";
 import FavoriteThumbnail from "./FavoriteThumbnail";
 import ProfieilThumbnail from "./ProfielThumbnail";
 
