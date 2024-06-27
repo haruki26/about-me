@@ -4,7 +4,7 @@ import LinkIcons from "./headerComponents/LinkIcons";
 
 const HeaderContent = () => {
     return (
-        <div className="w-full flex flex-col">
+        <div className="w-full flex flex-col ">
             <div className="px-2 py-2">
                 <FirstView />
             </div>
