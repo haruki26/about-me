@@ -6,7 +6,7 @@ const CreateThumbnail = () => {
                 <h2 className="card-title mb-2 text-2xl">Create</h2>
                 <div className="font-kosugiMaru flex flex-col items-center justify-center gap-2 mx-2">
                     <div className="w-full text-left mx-1">
-                        <p>Pythonを使った精算アプリなどを作ってます</p>
+                        <p>Pythonを使った精算アプリなどを作りました</p>
                     </div>
                     <img src="./../../../public/images/appview.png" alt="appview" className="object-cover rounded-md w-auto" />
                 </div>
