@@ -3,7 +3,8 @@ import LinkIcons from "./LinkIcons";
 
 const HeaderNavbar = () => {
     return (
-        <div className="navbar flex justify-between">
+        <>
+        <div className="navbar flex justify-between ">
             <div className="flex-none">
                 <button className="btn btn-square btn-ghost">
                     <GiHamburgerMenu size={"2.5rem"} />
@@ -13,6 +14,7 @@ const HeaderNavbar = () => {
                 <LinkIcons />
             </div>
         </div>
+        </>
     );
 };
 
