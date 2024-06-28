@@ -1,3 +1,5 @@
+import appview from "../../assets/images/appview.png";
+
 const CreateThumbnail = () => {
     return (
         <>
@@ -8,7 +10,7 @@ const CreateThumbnail = () => {
                     <div className="w-full text-left mx-1">
                         <p>Pythonを使った精算アプリなどを作りました</p>
                     </div>
-                    <img src="./../../../public/images/appview.png" alt="appview" className="object-cover rounded-md w-auto" />
+                    <img src={appview} alt="appview" className="object-cover rounded-md w-auto" />
                 </div>
                 <div className="card-actions justify-end">
                     <button className="btn btn-ghost text-2xl">More</button>

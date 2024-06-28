@@ -1,3 +1,6 @@
+import tart from "./../../assets/images/tart.jpg"
+import sea from "./../../assets/images/kaigan.jpg"
+
 const FavoriteThumbnail = () => {
     return (
         <>
@@ -10,11 +13,11 @@ const FavoriteThumbnail = () => {
                     </div>
                     <div className="w-full flex gap-7">
                         <div className="flex flex-col gap-2">
-                            <img src="./../../public/images/tart.jpg" alt="tart" className="object-cover rounded-md w-36 h-24" />
+                            <img src={tart} alt="tart" className="object-cover rounded-md w-36 h-24" />
                             <span className="text-center">いちごタルト</span>
                         </div>
                         <div className="flex flex-col gap-2">
-                            <img src="./../../../public/images/kaigan.jpg" alt="sea" className="object-cover rounded-md w-36 h-24" />
+                            <img src={sea} alt="sea" className="object-cover rounded-md w-36 h-24" />
                             <span className="text-center">地元の海岸</span>
                         </div>
                     </div>

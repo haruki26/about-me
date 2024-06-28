@@ -1,3 +1,5 @@
+import icon from "../../assets/images/icon.jpg"
+
 const ProfieilThumbnail = () => {
     return (
         <>
@@ -12,7 +14,7 @@ const ProfieilThumbnail = () => {
                     </div>
                     <div className="avatar">
                         <div className="rounded-xl w-30 h-28">
-                            <img src="./../../public/images/icon.jpg" alt="icon" className="object-cover" />
+                            <img src={icon} alt="icon" className="object-cover" />
                         </div>
                     </div>
                 </div>
