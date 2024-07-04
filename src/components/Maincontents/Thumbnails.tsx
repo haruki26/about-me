@@ -4,7 +4,7 @@ import ProfieilThumbnail from "./ProfielThumbnail";
 
 const Thumbnails = () => {
     return (
-        <div className="font-zenKurenaido px-1 py-2">
+        <div className="w-full font-zenKurenaido px-1 py-2">
             <div className="pb-3">
                 <h2 className="text-center text-3xl">Thumbnails</h2>
             </div>

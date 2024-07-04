@@ -4,40 +4,40 @@ import { RiHome3Line, RiInformation2Line, RiMailSendFill } from "react-icons/ri"
 
 const ContentsMenu = () => {
     return (
-        <ul className="menu menu-vertical menu-lg lg:menu-horizontal font-zenKurenaido font-semibold text-slate-700">
+        <ul className="menu menu-vertical menu-xs lg:menu-horizontal font-zenKurenaido font-semibold text-slate-400">
             <li>
                 <label className="mx-auto">
                     <a href="#" />
-                    <RiHome3Line size={"3.5rem"} />
-                    <span  className="text-3xl">HOME</span>
+                    <RiHome3Line size={"1.75rem"} />
+                    <span  className="text-xl">HOME</span>
                 </label>
             </li>
             <li>
                 <label className="mx-auto">
                     <a href="#" />
-                    <RiInformation2Line size={"3.5rem"} />
-                    <span  className="text-3xl">Profiel</span>
+                    <RiInformation2Line size={"1.75rem"} />
+                    <span  className="text-xl">Profiel</span>
                 </label>
             </li>
             <li>
                 <label className="mx-auto">
                     <a href="#" />
-                    <MdFavoriteBorder size={"3.5rem"} />
-                    <span  className="text-3xl">Favorite</span>
+                    <MdFavoriteBorder size={"1.75rem"} />
+                    <span  className="text-xl">Favorite</span>
                 </label>
             </li>
             <li>
                 <label className="mx-auto">
                     <a href="#" />
-                    <GiGears size={"3.5rem"} />
-                    <span className="text-3xl">Create</span>
+                    <GiGears size={"1.75rem"} />
+                    <span className="text-xl">Create</span>
                 </label>
             </li>
             <li>
                 <label className="mx-auto">
                     <a href="#" />
-                    <RiMailSendFill size={"3.5rem"} />
-                    <span className="text-3xl">Contact</span>
+                    <RiMailSendFill size={"1.75rem"} />
+                    <span className="text-xl">Contact</span>
                 </label>
             </li>
         </ul>
