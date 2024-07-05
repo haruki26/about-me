@@ -3,12 +3,12 @@ import appview from "../../assets/images/appview.png";
 const CreateThumbnail = () => {
     return (
         <>
-        <div className="card glass">
+        <div className="card glass max-w-sm">
             <div className="card-body w-full">
                 <h2 className="card-title mb-2 text-2xl">Create</h2>
-                <div className="font-kosugiMaru flex flex-col items-center justify-center gap-2 mx-2">
+                <div className="font-kosugiMaru flex flex-col items-center justify-center gap-2 mx-1">
                     <div className="w-full text-left mx-1">
-                        <p>Pythonを使った精算アプリなどを作りました</p>
+                        <p>Pythonを使った精算アプリやこれから作ってみたいもの</p>
                     </div>
                     <img src={appview} alt="appview" className="object-cover rounded-md w-auto" />
                 </div>

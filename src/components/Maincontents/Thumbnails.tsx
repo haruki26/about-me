@@ -8,7 +8,7 @@ const Thumbnails = () => {
             <div className="pb-3">
                 <h2 className="text-center text-3xl">Thumbnails</h2>
             </div>
-            <div className="w-full flex flex-col gap-5 px-2 py-1">
+            <div className="flex flex-col items-center gap-5 mx-auto px-2 py-1">
                 <ProfieilThumbnail />
                 <FavoriteThumbnail />
                 <CreateThumbnail />
