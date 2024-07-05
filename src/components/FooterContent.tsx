@@ -1,15 +1,17 @@
 import ContentsMenu from "./footerComponents/ContentsMenu";
 import ThemeChangeBtn from "./footerComponents/ThemeChangeBtn";
+import TopBackBtn from "./footerComponents/TopBackBtn";
 
 const FooterContent = () => {
     return (
         <div className="w-screen bg-slate-800 px-3 py-2">
-            <div className="flex">
-                <div className="px-5">
+            <div className="flex justify-center gap-1">
+                <div>
                     <ContentsMenu />
                 </div>
-                <div className="flex flex-col">
+                <div className="flex flex-col px-9 my-auto gap-5">
                     <ThemeChangeBtn />
+                    <TopBackBtn />
                 </div>
             </div>
             <div className="w-full text-center py-1">

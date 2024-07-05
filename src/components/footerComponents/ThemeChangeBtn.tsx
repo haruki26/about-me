@@ -9,7 +9,7 @@ const ThemeChangeBtn = () => {
                 <LuSunMedium className="swap-on h-10 w-10 fill-current" />
                 <FaRegMoon className="swap-off h-10 w-10 fill-current" />
             </label>
-            <span>THEME</span>
+            <span className="mx-auto font-zenKurenaido font-semibold">Theme</span>
         </div>
     );
 }

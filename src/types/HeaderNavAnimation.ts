@@ -1,0 +1,1 @@
+export type HeaderNavAnimation = "animate-text-blur-out" | "animate-text-focus-in";
