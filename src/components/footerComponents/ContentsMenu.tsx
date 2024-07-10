@@ -9,7 +9,7 @@ const ContentsMenu = () => {
                 <label className="mx-auto">
                     <a href="#" />
                     <RiHome3Line size={"1.75rem"} />
-                    <span  className="text-xl">HOME</span>
+                    <span  className="text-xl">Home</span>
                 </label>
             </li>
             <li>
