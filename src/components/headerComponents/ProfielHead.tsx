@@ -2,11 +2,11 @@ import icon from "../../assets/images/icon.jpg"
 
 const ProfielHead = () => {
     return (
-        <div className="mx-2 my-1 flex flex-col items-center">
+        <div className="w-full mx-auto my-1 flex flex-col md:flex-row md:gap-3 md:justify-center md:px-10">
             <div className="py-3 animate-fade-in-bottom">
-                <img src={icon} alt="Profiel" className="rounded-xl object-cover w-80 h-80 object-bottom " />
+                <img src={icon} alt="Profiel" className="rounded-xl object-cover w-80 h-80 object-bottom mx-auto" />
             </div>
-            <div className="py-3 animate-fade-in-bottom chat chat-start gap-2">
+            <div className="py-3 animate-fade-in-bottom chat chat-start gap-2 md:flex md:flex-col md:justify-center">
                 <div className="chat-bubble font-kosugiMaru text-left text-2xl mx-1">
                     <p>久保陽生といいます</p>
                     <p>MBTIはISTPです</p>
