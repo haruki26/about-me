@@ -8,6 +8,8 @@ import { HeaderNavAnimation } from "./types/HeaderNavAnimation";
 import { TargetViewPosition } from "./types/TargetViewPosition";
 import HeaderNavbar from "./components/headerComponents/HeaderNavbar";
 import DrawerMenu from "./components/DrawerMenu";
+import ProfielHead from "./components/headerComponents/ProfielHead";
+import Profiel from "./components/Maincontents/Profiel";
 
 const App = () => {
   const targetRef = useRef(null)
@@ -31,22 +33,24 @@ const App = () => {
     <div className="drawer">
       <input id="drawer-menu" type="checkbox" className="drawer-toggle" />
       <div className="drawer-content">
-        <div className={`fixed z-50 ${isNavAnimate}`}>
+        <div className={`sticky top-0 z-50 ${isNavAnimate}`}>
           <HeaderNavbar />
         </div>
         <div className="flex flex-col">
           <header ref={targetRef}>
-            <div className="">
-              <HeaderContent />
+            <div className="mx-2">
+              <ProfielHead />
             </div>
           </header>
           <main>
             <div className="py-5">
-              <MainContent />
+              <Profiel />
             </div>
           </main>
           <footer>
-            <FooterContent />
+            <div className="w-full">
+              <FooterContent />
+            </div>
           </footer>
         </div>
       </div>

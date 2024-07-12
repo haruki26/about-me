@@ -3,7 +3,7 @@ import appview from "../../assets/images/appview.png";
 const CreateThumbnail = () => {
     return (
         <>
-        <div className="card glass max-w-sm">
+        <div className="card glass max-w-sm animate-fade-in-bottom">
             <div className="card-body w-full">
                 <h2 className="card-title mb-2 text-2xl">Create</h2>
                 <div className="font-kosugiMaru flex flex-col items-center justify-center gap-2 mx-1">

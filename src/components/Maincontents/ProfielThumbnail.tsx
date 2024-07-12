@@ -3,7 +3,7 @@ import icon from "../../assets/images/icon.jpg"
 const ProfieilThumbnail = () => {
     return (
         <>
-        <div className="card glass max-w-sm">
+        <div className="card glass max-w-sm animate-fade-in-bottom">
             <div className="card-body w-full h-full">
                 <h2 className="card-title mb-2 text-2xl">Profiel</h2>
                 <div className="flex items-center justify-center gap-2">
