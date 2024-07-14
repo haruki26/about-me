@@ -11,6 +11,7 @@ import DrawerMenu from "./components/DrawerMenu";
 import ProfielHead from "./components/headerComponents/ProfielHead";
 import Profiel from "./components/Maincontents/Profiel";
 import { Contents } from "./types/Contents";
+import Contact from "./components/Maincontents/Contact";
 
 const App: FC = () => {
   const targetRef = useRef(null)
@@ -52,12 +53,12 @@ const App: FC = () => {
         <div className="flex flex-col">
           <header ref={targetRef}>
             <div className="mx-2">
-              <ProfielHead />
+              
             </div>
           </header>
           <main>
             <div className="py-5">
-              <Profiel />
+              <Contact />
             </div>
           </main>
           <footer>
