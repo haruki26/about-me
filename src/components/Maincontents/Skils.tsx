@@ -1,7 +1,8 @@
 import { TiSpannerOutline } from "react-icons/ti";
 import flower from "../../assets/images/flower.jpg";
+import { FC } from "react";
 
-const Skil = () => {
+const Skil: FC = () => {
     return (
         <>
         <div className="max-w-screen-md flex flex-col md:mx-auto">
@@ -16,18 +17,19 @@ const Skil = () => {
                 </div>
                 <div className="mx-auto flex flex-col justify-center gap-2 md:flex-row md:gap-10">
                     <div className="font-kosugiMaru text-xl flex flex-col gap-1.5">
-                        <h2 className="text-3xl text-left my-3 md:text-center">言語・ライブラリ</h2>
-                        <li className="list-none px-2">
+                        <h2 className="text-3xl text-left my-3 md:text-center md:text-4xl">言語・ライブラリ</h2>
+                        <li className="list-none px-2 md:text-center md:text-2xl md:space-y-2">
                             <ul>HTML / CSS / JavaScript</ul>
                             <ul>React /  TypeScript</ul>
                             <ul>C言語 / C++ / Python</ul>
                         </li>
-                        <p className="px-1">全て勉強中です</p>
+                        <p className="px-1 py-3 md:text-2xl md:text-center">全て勉強中です</p>
                     </div>
                     <div className="font-kosugiMaru text-xl flex flex-col gap-1.5">
-                        <h2 className="text-3xl text-left my-3 md:text-center">資格・検定</h2>
-                        <li className="list-none px-2">
-                            <ul>基本情報技術者 / 情報技術検定1級</ul>
+                        <h2 className="text-3xl text-left my-3 md:text-center md:text-4xl">資格・検定</h2>
+                        <li className="list-none px-2 md:text-center md:text-2xl md:space-y-2">
+                            <ul>基本情報技術者</ul>
+                            <ul> 情報技術検定1級</ul>
                             <ul>AI-900 / DP-900</ul>
                             <ul>第2種電気工事士</ul>
                             <ul>漢字検定2級</ul>

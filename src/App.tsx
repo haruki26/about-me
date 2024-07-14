@@ -1,7 +1,7 @@
 import HeaderContent from "./components/HeaderContent";
 import MainContent from "./components/MainContent";
 import FooterContent from "./components/FooterContent";
-import { useEffect, useRef, useState } from "react";
+import { ChangeEvent, FC, useEffect, useRef, useState } from "react";
 import useNavAnimation from "./hooks/useNavAnimation";
 import useOnScreen from "./hooks/useOnScreen";
 import { HeaderNavAnimation } from "./types/HeaderNavAnimation";
@@ -10,11 +10,14 @@ import HeaderNavbar from "./components/headerComponents/HeaderNavbar";
 import DrawerMenu from "./components/DrawerMenu";
 import ProfielHead from "./components/headerComponents/ProfielHead";
 import Profiel from "./components/Maincontents/Profiel";
+import { Contents } from "./types/Contents";
 
-const App = () => {
+const App: FC = () => {
   const targetRef = useRef(null)
+  const [isContent, setIsContent] = useState<Contents>("Profiel")
   const [isVisivle, setIsVisible] = useState<boolean>(false);
   const [isNavAnimate, setIsNavAnimate] = useState<HeaderNavAnimation>(useNavAnimation(isVisivle))
+  const [isDrawerState, setIsDrawerState] = useState<boolean>(false)
 
   const targetViewPosition: TargetViewPosition = useOnScreen(targetRef);
 
@@ -24,18 +27,28 @@ const App = () => {
       } else {
           setIsVisible(true)
       }
+
+      if (isContent === "Home") {
+        setIsVisible(false)
+      } else {
+        setIsVisible(true)
+      }
       
       setIsNavAnimate(useNavAnimation(isVisivle))
-  }, [targetViewPosition])
+  }, [targetViewPosition, isContent])
+
+  const changeDrawerState = (event: ChangeEvent<HTMLInputElement>) => {
+    setIsDrawerState(event.target.checked)
+  }
 
   return (
     <>
-    <div className="drawer">
-      <input id="drawer-menu" type="checkbox" className="drawer-toggle" />
+    <div className={`sticky top-0 z-50 ${isNavAnimate}`}>
+      <HeaderNavbar drawerState={isDrawerState} contentState={isContent} />
+    </div>
+    <div className="drawer w-screen">
+      <input id="drawer-menu" type="checkbox" checked={isDrawerState} className="drawer-toggle" onChange={changeDrawerState} readOnly />
       <div className="drawer-content">
-        <div className={`sticky top-0 z-50 ${isNavAnimate}`}>
-          <HeaderNavbar />
-        </div>
         <div className="flex flex-col">
           <header ref={targetRef}>
             <div className="mx-2">

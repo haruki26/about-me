@@ -1,7 +1,8 @@
 import Skil from "./Skils";
 import Interest from "./Interest";
+import { FC } from "react";
 
-const Profiel = () => {
+const Profiel: FC = () => {
     return (
         <div className="p-1 flex flex-col gap-5">
             <Skil />

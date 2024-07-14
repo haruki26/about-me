@@ -1,17 +1,26 @@
+import { FC } from "react";
 import { FaGithub, FaInstagram } from "react-icons/fa";
 import { RiMailSendFill } from "react-icons/ri";
 
-const LinkIcons = () => {
+type Props = {
+    size?: string;
+    color?: string;
+};
+
+const LinkIcons: FC<Props> = ({size, color}: Props) => {
+    const iconSize =  size ? size : "2rem";
+    const iconColor = color ? color : "black";
+
     return (
         <>
             <a href="https://github.com/haruki26" className="tooltip mytooltipcolor" data-tip="Github">
-                <FaGithub size={"2rem"} color="black"/>
+                <FaGithub size={iconSize} color={iconColor} />
             </a>
             <a href="https://www.instagram.com/yousei_81" className="tooltip mytooltipcolor" data-tip="Instagram">
-                <FaInstagram size={"2rem"} color="black"/>
+                <FaInstagram size={iconSize} color={iconColor} />
             </a>
             <a href="#" className="tooltip mytooltipcolor" data-tip="Contact">
-                <RiMailSendFill size={"2rem"} color="black"/>
+                <RiMailSendFill size={iconSize} color={iconColor} />
             </a>
         </>
     );

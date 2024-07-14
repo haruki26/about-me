@@ -1,6 +1,7 @@
+import { FC } from "react";
 import icon from "../../assets/images/icon.jpg"
 
-const ProfieilThumbnail = () => {
+const ProfieilThumbnail: FC = () => {
     return (
         <>
         <div className="card glass max-w-sm animate-fade-in-bottom">
