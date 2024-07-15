@@ -7,6 +7,7 @@ const Profiel: FC = () => {
         <div className="p-1 max-w-screen-md flex flex-col gap-5 mx-auto">
             <AboutMe />
             <Skil />
+            
         </div>
     );
 };
