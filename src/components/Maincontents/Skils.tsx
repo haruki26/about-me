@@ -18,7 +18,7 @@ const Skil: FC = () => {
                 </div>
                 <div className="flex flex-col justify-center gap-2 md:mx-auto md:flex-row md:gap-10">
                     <div className="font-kosugiMaru text-xl flex flex-col gap-1.5">
-                        <div className="flex gap-2 my-3">
+                        <div className="flex gap-2 my-3 justify-center">
                             <TbBooks size={"2.5rem"} />
                             <h3 className="text-3xl text-left md:text-center md:text-3xl">言語・ライブラリ</h3>
                         </div>

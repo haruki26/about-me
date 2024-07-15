@@ -44,7 +44,7 @@ const App: FC = () => {
 
   return (
     <>
-    <div className={`sticky top-0 z-50 ${isNavAnimate}`}>
+    <div className={`w-screen sticky top-0 z-50 ${isNavAnimate}`}>
       <HeaderNavbar drawerState={isDrawerState} contentState={isContent} />
     </div>
     <div className="drawer w-screen">
