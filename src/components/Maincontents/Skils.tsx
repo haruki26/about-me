@@ -11,53 +11,6 @@ const Skil: FC = () => {
             title: (
                 <>
                 <div className="flex gap-3 mx-auto">
-                    <TbBooks size={"2rem"} className="my-auto" />
-                    <div className="flex gap-1 md:flex-col md:text-center">
-                        <h3>言語</h3>
-                        <h3 className="md:hidden">・</h3>
-                        <h3>ライブラリ</h3>
-                    </div>
-                </div>
-                </>
-            ),
-            content: (
-                <>
-                <div className="flex flex-col">
-                    <div className="flex gap-2">
-                        <p>HTML</p>
-                        <span>/</span>
-                        <p>CSS</p>
-                        <span>/</span>
-                        <p>JavaScript</p>
-                    </div>
-                    <div className="flex gap-2">
-                        <p>TypeScript</p>
-                        <span>/</span>
-                        <p>React</p>
-                    </div>
-                    <div className="flex gap-2">
-                        <p>C言語</p>
-                        <span>/</span>
-                        <p>C++</p>
-                    </div>
-                    <div className="flex gap-2">
-                        <p>Python</p>
-                        <span>/</span>
-                        <p>tkinter</p>
-                    </div>
-                    <div className="flex gap-2">
-                        <p>MicroPython</p>
-                        <span>/</span>
-                        <p>Arduino</p>
-                    </div>
-                </div>
-                </>
-            )
-        },
-        {
-            title: (
-                <>
-                <div className="flex gap-3 mx-auto">
                     <TiPencil size={"2rem"} className="my-auto" />
                     <div className="flex gap-1 md:flex-col md:text-center">
                         <h3>資格</h3>
@@ -108,10 +61,109 @@ const Skil: FC = () => {
                     <h3 className="text-center md:text-7xl">花冠が作れます</h3>
                     <img src={flower} alt="花冠" className="rounded-xl object-cover w-60 h-44 object-top mx-auto md:w-96 md:h-80" />
                 </div>
-                <div className="font-kosugiMaru mx-auto">
-                    {contents.map((content, index) => (
-                        <IntroduceContents key={index} contents={content} divTitleFraction={"1/2"} />
-                    ))}
+                <div className="font-kosugiMaru mx-auto w-3/4">
+                    <div className="flex gap-2">
+                        <TbBooks size={"2.5rem"} className="my-auto" />
+                        <h3 className="text-2xl py-1 flex flex-col md:flex-row">
+                            <span>言語・ライブラリ</span>
+                            <span><span className="hidden md:inline-block">・</span>フレームワーク</span>
+                        </h3>
+                    </div>
+                    <div className="px-3 md:w-5/6">
+                        {[
+                            {
+                                title: (
+                                    <>
+                                    <div className="flex flex-col md:items-center">
+                                        <div className="flex gap-2">
+                                            <p>HTML</p>
+                                            <span>/</span>
+                                            <p>CSS</p>
+                                        </div>
+                                        <div className="flex gap-2">
+                                            <p>JavaScript</p>
+                                            <span>/</span>
+                                            <p>TypeScript</p>
+                                        </div>
+                                        <div className="flex gap-2">
+                                            <p>React</p>
+                                            <span>/</span>
+                                            <p>Tailwind CSS</p>
+                                        </div>
+                                    </div>
+                                    </>
+                                ),
+                                content: (
+                                    <>
+                                    <div className="">
+                                        <p>
+                                            このサイトはReact、TypeScript、Tailwind CSSを使用して作成してます
+                                        </p>
+                                    </div>
+                                    </>
+                                )
+                            },
+                            {
+                                title: (
+                                    <>
+                                    <div className="flex gap-2">
+                                        <p>C言語</p>
+                                        <span>/</span>
+                                        <p>C++</p>
+                                    </div>
+                                    </>
+                                ),
+                                content: (
+                                    <>
+                                    <div className="w-full ">
+                                        <p>学習期間:4ヶ月</p>
+                                        <p></p>
+                                    </div>
+                                    </>
+                                )
+                            },
+                            {
+                                title: (
+                                    <>
+                                    <div className="flex gap-2">
+                                        <p>Python</p>
+                                        <span>/</span>
+                                        <p>tkinter</p>
+                                    </div>
+                                    </>
+                                ),
+                                content: (
+                                    <>
+                                    <div className="w-full ">
+                                        <p>学習期間:4ヶ月</p>
+                                        <p></p>
+                                    </div>
+                                    </>
+                                )
+                            },
+                            {
+                                title: (
+                                    <>
+                                    <div className="flex gap-2">
+                                        <p>MicroPython</p>
+                                        <span>/</span>
+                                        <p>Arduino</p>
+                                    </div>
+                                    </>
+                                ),
+                                content: (
+                                    <>
+                                    <div className="w-full ">
+                                        <p>学習期間:4ヶ月</p>
+                                        <p></p>
+                                    </div>
+                                    </>
+                                )
+                            }
+                        ].map((content: TableContents, index: number) => (
+                            <IntroduceContents key={index} contents={content} divTitleFraction={""} />
+                        ))}
+                    </div>
                 </div>
             </div>
         </div>
