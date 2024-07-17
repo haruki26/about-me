@@ -61,7 +61,7 @@ const Skil: FC = () => {
                     <h3 className="text-center md:text-7xl">花冠が作れます</h3>
                     <img src={flower} alt="花冠" className="rounded-xl object-cover w-60 h-44 object-top mx-auto md:w-96 md:h-80" />
                 </div>
-                <div className="font-kosugiMaru mx-auto w-3/4">
+                <div className="font-kosugiMaru mx-auto">
                     <div className="flex gap-2">
                         <TbBooks size={"2.5rem"} className="my-auto" />
                         <h3 className="text-2xl py-1 flex flex-col md:flex-row">
@@ -69,12 +69,12 @@ const Skil: FC = () => {
                             <span><span className="hidden md:inline-block">・</span>フレームワーク</span>
                         </h3>
                     </div>
-                    <div className="px-3 md:w-5/6">
+                    <div className="px-3 mx-auto md:w-4/5">
                         {[
                             {
                                 title: (
                                     <>
-                                    <div className="flex flex-col md:items-center">
+                                    <div className="w-full flex flex-col mx-auto md:items-center">
                                         <div className="flex gap-2">
                                             <p>HTML</p>
                                             <span>/</span>
@@ -87,18 +87,19 @@ const Skil: FC = () => {
                                         </div>
                                         <div className="flex gap-2">
                                             <p>React</p>
-                                            <span>/</span>
+                                        </div>
+                                        <div className="flex gap-2">
                                             <p>Tailwind CSS</p>
+                                            <span>/</span>
+                                            <p>daisyUI</p>
                                         </div>
                                     </div>
                                     </>
                                 ),
                                 content: (
                                     <>
-                                    <div className="">
-                                        <p>
-                                            このサイトはReact、TypeScript、Tailwind CSSを使用して作成してます
-                                        </p>
+                                    <div className="my-auto">
+                                        <p>このサイトはReact、TypeScript、Tailwind CSS、daisyUIを使用して作成しました</p>
                                     </div>
                                     </>
                                 )
@@ -106,7 +107,7 @@ const Skil: FC = () => {
                             {
                                 title: (
                                     <>
-                                    <div className="flex gap-2">
+                                    <div className="flex gap-2 min-w-full">
                                         <p>C言語</p>
                                         <span>/</span>
                                         <p>C++</p>
@@ -115,10 +116,19 @@ const Skil: FC = () => {
                                 ),
                                 content: (
                                     <>
-                                    <div className="w-full ">
-                                        <p>学習期間:4ヶ月</p>
-                                        <p></p>
-                                    </div>
+                                    <p>
+                                        <a
+                                        href="https://www.sbcr.jp/product/4797392586/"
+                                        className="underline">
+                                            やさしいC
+                                        </a>、
+                                        <a
+                                        href="https://9cguide.appspot.com/s_start.html"
+                                        className="underline">
+                                            苦C
+                                        </a>
+                                        を使い学習しています
+                                    </p>
                                     </>
                                 )
                             },
@@ -153,7 +163,7 @@ const Skil: FC = () => {
                                 ),
                                 content: (
                                     <>
-                                    <div className="w-full ">
+                                    <div className="w-full w-">
                                         <p>学習期間:4ヶ月</p>
                                         <p></p>
                                     </div>
@@ -161,7 +171,7 @@ const Skil: FC = () => {
                                 )
                             }
                         ].map((content: TableContents, index: number) => (
-                            <IntroduceContents key={index} contents={content} divTitleFraction={""} />
+                            <IntroduceContents key={index} contents={content} divTitleFraction={"1/2"} />
                         ))}
                     </div>
                 </div>
