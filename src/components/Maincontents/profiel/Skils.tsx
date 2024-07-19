@@ -1,5 +1,5 @@
 import { TiPencil, TiSpannerOutline } from "react-icons/ti";
-import flower from "../../assets/images/flower.jpg";
+import flower from "../../../assets/images/flower.jpg";
 import { FC } from "react";
 import { TbBooks } from "react-icons/tb";
 

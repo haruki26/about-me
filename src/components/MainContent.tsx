@@ -1,4 +1,4 @@
-import Thumbnails from "./Maincontents/Thumbnails";
+import Thumbnails from "./mainContents/Thumbnails";
 
 const MainContent = () => {
     return (

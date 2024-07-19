@@ -1,6 +1,6 @@
-import CreateThumbnail from "./CreateThumbnail";
-import FavoriteThumbnail from "./FavoriteThumbnail";
-import ProfieilThumbnail from "./ProfielThumbnail";
+import CreateThumbnail from "./thumbnail/CreateThumbnail";
+import FavoriteThumbnail from "./thumbnail/FavoriteThumbnail";
+import ProfieilThumbnail from "./thumbnail/ProfielThumbnail";
 
 const Thumbnails = () => {
     return (

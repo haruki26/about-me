@@ -9,9 +9,9 @@ import { TargetViewPosition } from "./types/TargetViewPosition";
 import HeaderNavbar from "./components/headerComponents/HeaderNavbar";
 import DrawerMenu from "./components/DrawerMenu";
 import ProfielHead from "./components/headerComponents/ProfielHead";
-import Profiel from "./components/Maincontents/Profiel";
+import Profiel from "./components/mainContents/Profiel";
 import { Contents } from "./types/Contents";
-import Contact from "./components/Maincontents/Contact";
+import Contact from "./components/mainContents/Contact";
 
 const App: FC = () => {
   const targetRef = useRef(null)

@@ -5,7 +5,7 @@ type Props = {
     content: JSX.Element;
 };
 
-const IntroduceContents: React.FC<Props> = ({title, content}: Props): JSX.Element => {
+const IntroduceContents: React.FC<Props> = ({title, content}) => {
     return (
         <>
         <div className="w-full flex flex-col gap-5 md:gap-0">
