@@ -1,6 +1,7 @@
+import { FC } from "react";
 import { TiArrowUpOutline } from "react-icons/ti";
 
-const TopBackBtn = () => {
+const TopBackBtn: FC = () => {
     const returnTop = () => {
         window.scrollTo({
             top: 0,
@@ -9,13 +10,12 @@ const TopBackBtn = () => {
     };
 
     return (
-        <>
-            <label className="flex flex-col items-center">
-                <button className="hover:bg-slate-700" onClick={returnTop}>
-                    <TiArrowUpOutline size={"2.5rem"}/></button>
-                <span className="font-zenKurenaido font-semibold">Page Top</span>
-            </label>
-        </>
+        <label className="flex flex-col items-center">
+            <button className="hover:bg-slate-700" onClick={returnTop}>
+                <TiArrowUpOutline size={"2.5rem"}/>
+            </button>
+            <span className="font-zenKurenaido font-semibold">Page Top</span>
+        </label>
     );
 }
 

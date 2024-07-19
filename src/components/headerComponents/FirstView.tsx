@@ -1,4 +1,6 @@
-const FirstView = () => {
+import { FC } from "react";
+
+const FirstView: FC = () => {
     return (
         <div className="font-zenKurenaido font-extrabold text-slate-700 w-full h-screen flex flex-col gap-10">
             <div className="h-1/2 flex items-end">

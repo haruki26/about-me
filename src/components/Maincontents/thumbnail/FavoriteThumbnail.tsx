@@ -1,7 +1,8 @@
+import { FC } from "react";
 import tart from "./../../assets/images/tart.jpg"
 import sea from "./../../assets/images/kaigan.jpg"
 
-const FavoriteThumbnail = () => {
+const FavoriteThumbnail: FC = () => {
     return (
         <>
         <div className="card glass max-w-sm animate-fade-in-bottom">

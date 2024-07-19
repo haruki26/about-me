@@ -1,9 +1,9 @@
+import { FC } from "react";
 import ContentsMenu from "./footerComponents/ContentsMenu";
 import ThemeChangeBtn from "./footerComponents/ThemeChangeBtn";
 import TopBackBtn from "./footerComponents/TopBackBtn";
 
-const FooterContent = () => {
-
+const FooterContent: FC = () => {
     return (
         <div className="w-screen bg-slate-800 px-3 py-2">
             <div className="flex justify-center gap-1 lg:py-5">

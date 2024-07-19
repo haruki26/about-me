@@ -30,7 +30,6 @@ const Contact: FC = () => {
     };
 
     return (
-        <>
         <div className="max-w-screen-sm mx-auto">
             <div className="mx-3 mockup-browser bg-slate-900 border">
                 <div className="mockup-browser-toolbar">
@@ -69,7 +68,6 @@ const Contact: FC = () => {
                 </div>
             </div>
         </div>
-        </>
     );
 }
 

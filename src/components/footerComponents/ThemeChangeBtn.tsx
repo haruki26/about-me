@@ -1,7 +1,8 @@
+import { FC } from "react";
 import { FaRegMoon } from "react-icons/fa";
 import { LuSunMedium } from "react-icons/lu";
 
-const ThemeChangeBtn = () => {
+const ThemeChangeBtn: FC = () => {
     return (
         <div className="flex flex-col gap-0.5">
             <label className="swap swap-rotate">

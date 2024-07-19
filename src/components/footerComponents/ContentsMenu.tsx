@@ -1,8 +1,9 @@
+import { FC } from "react";
 import { GiGears } from "react-icons/gi";
 import { MdFavoriteBorder } from "react-icons/md";
 import { RiHome3Line, RiInformation2Line, RiMailSendFill } from "react-icons/ri";
 
-const ContentsMenu = () => {
+const ContentsMenu: FC = () => {
     return (
         <ul className="menu menu-vertical menu-xs lg:menu-horizontal font-zenKurenaido font-semibold text-slate-400">
             <li>

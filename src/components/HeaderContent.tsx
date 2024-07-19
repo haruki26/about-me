@@ -1,6 +1,7 @@
+import { FC } from "react";
 import FirstView from "./headerComponents/FirstView";
 
-const HeaderContent = () => {
+const HeaderContent: FC = () => {
     return (
         <>
         <div className="px-3 py-2">

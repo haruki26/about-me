@@ -1,6 +1,6 @@
-import Skil from "./profiel/Skils";
 import { FC } from "react";
 import AboutMe from "./profiel/AboutMe";
+import Skil from "./profiel/Skil";
 
 const Profiel: FC = () => {
     return (

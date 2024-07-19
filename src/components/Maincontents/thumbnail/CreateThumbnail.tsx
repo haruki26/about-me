@@ -1,6 +1,7 @@
+import { FC } from "react";
 import appview from "../../assets/images/appview.png";
 
-const CreateThumbnail = () => {
+const CreateThumbnail: FC = () => {
     return (
         <>
         <div className="card glass max-w-sm animate-fade-in-bottom">

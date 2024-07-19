@@ -10,7 +10,7 @@ type Props = {
     contentState: Contents;
 };
 
-const HeaderNavbar: FC<Props> = ({drawerState, contentState}: Props) => {
+const HeaderNavbar: FC<Props> = ({drawerState, contentState}) => {
     const [isContent, setIsContent] = useState<Contents>(contentState);
     const [checked, setChecked] = useState<boolean>(!drawerState);
     const [width]: number[] = useWindowSize();

@@ -3,7 +3,6 @@ import { AiOutlineDeploymentUnit } from "react-icons/ai";
 
 const Interest: FC = () => {
     return (
-        <>
         <div className="w-5/6 flex flex-col gap-3 mx-auto">
             <div className="p-2 flex gap-2">
                 <AiOutlineDeploymentUnit size={"2.5rem"} />
@@ -18,7 +17,6 @@ const Interest: FC = () => {
                 </p>
             </div>
         </div>
-        </>
     );
 }
 

@@ -1,8 +1,9 @@
+import { FC } from "react";
 import CreateThumbnail from "./thumbnail/CreateThumbnail";
 import FavoriteThumbnail from "./thumbnail/FavoriteThumbnail";
 import ProfieilThumbnail from "./thumbnail/ProfielThumbnail";
 
-const Thumbnails = () => {
+const Thumbnails: FC = () => {
     return (
         <div className="w-full font-zenKurenaido px-1 py-2">
             <div className="pb-3">

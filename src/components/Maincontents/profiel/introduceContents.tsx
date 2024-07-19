@@ -7,7 +7,6 @@ type Props = {
 
 const IntroduceContents: React.FC<Props> = ({title, content}) => {
     return (
-        <>
         <div className="w-full flex flex-col gap-5 md:gap-0">
             <div className="w-full flex flex-col gap-1 md:flex-row md:py-1 md:relative">
                 <div className={`flex gap-1 md:w-1/3`}>
@@ -23,7 +22,6 @@ const IntroduceContents: React.FC<Props> = ({title, content}) => {
                 </div>
             </div>
         </div>
-        </>
     );
 };
 
