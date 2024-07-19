@@ -4,7 +4,7 @@ import { MdOutlineCameraAlt, MdSentimentSatisfiedAlt } from "react-icons/md";
 import { RiAccountPinBoxLine } from "react-icons/ri";
 import { TbUserHeart } from "react-icons/tb";
 import IntroduceContents from "./introduceContents";
-import { TableContents } from "../../types/TableContents";
+import Interest from "./Interest";
 
 const AboutMe: FC = () => {
     return (
@@ -90,10 +90,11 @@ const AboutMe: FC = () => {
                         </div>
                         </>
                     )
-                }].map((content: TableContents, index: number) => (
-                    <IntroduceContents key={index} contents={content} divTitleFraction="1/3" />
+                }].map(({title, content}, index) => (
+                    <IntroduceContents key={index} title={title} content={content} />
                 ))}
             </div>
+            <Interest />
         </div>
         </>
     );
