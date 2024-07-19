@@ -1,5 +1,5 @@
 import { FC } from "react";
-import Thumbnails from "./mainContents/Thumbnails";
+import Thumbnails from "./mainComponents/Thumbnails";
 
 const MainContent: FC = () => {
     return (

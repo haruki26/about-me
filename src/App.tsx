@@ -1,5 +1,3 @@
-import HeaderContent from "./components/HeaderContent";
-import MainContent from "./components/MainContent";
 import FooterContent from "./components/FooterContent";
 import { ChangeEvent, FC, useEffect, useRef, useState } from "react";
 import useNavAnimation from "./hooks/useNavAnimation";
@@ -9,9 +7,8 @@ import { TargetViewPosition } from "./types/TargetViewPosition";
 import HeaderNavbar from "./components/headerComponents/HeaderNavbar";
 import DrawerMenu from "./components/DrawerMenu";
 import ProfielHead from "./components/headerComponents/ProfielHead";
-import Profiel from "./components/mainContents/Profiel";
+import Profiel from "./components/mainComponents/Profiel";
 import { Contents } from "./types/Contents";
-import Contact from "./components/mainContents/Contact";
 
 const App: FC = () => {
   const targetRef = useRef(null)
