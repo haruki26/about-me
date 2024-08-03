@@ -1,15 +1,13 @@
 import { FC } from "react";
-import Carousel from "./favorite/Carousel";
+import FavoritePhoto from "./favorite/FavoritePhoto";
+import Baking from "./favorite/Baking";
 
 const Favorite: FC = () => {
     return (
-        <div>
-            <div>
-                <h2 className="font-kosugiMaru text-2xl text-center">Photo</h2>
-                <Carousel />
-            </div>
-            <div>
-                <h2 className="font-kosugiMaru text-2xl text-center">Baking</h2>
+        <div className="p-5 w-full">
+            <div className="flex flex-col justify-center gap-10 md:flex-row md:gap-3">
+                <FavoritePhoto />
+                <Baking />
             </div>
         </div>
     );
