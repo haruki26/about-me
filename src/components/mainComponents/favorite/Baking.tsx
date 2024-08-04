@@ -1,11 +1,10 @@
 import { FC } from "react";
-import { LuCakeSlice } from "react-icons/lu";
-import Carousel from "./Carousel";
 
 import bushdenoel from "../../../assets/images/bushbenoel.jpg"
 import cheesecake from "../../../assets/images/cheesecake.jpg"
 import creampuff from "../../../assets/images/creampuff.jpg"
 import tart from "../../../assets/images/tart.jpg"
+import GridPhotos from "./GridPhotos";
 
 const Baking: FC = () => {
     const images = [
@@ -16,12 +15,15 @@ const Baking: FC = () => {
     ];
 
     return (
-        <div className="flex flex-col items-center gap-3">
-            <div className="flex gap-2">
-                <LuCakeSlice className="my-auto" size={"2rem"} />
-                <h2 className="font-kosugiMaru text-2xl md:text-3xl">Baking</h2>
+        <div className="mockup-phone">
+            <div className="camera" />
+            <div className="display">
+                <div className="artboard artboard-demo phone-1">
+                    <div className="w-full h-full flex flex-col gap-5 px-2 py-10 font-kosugiMaru overflow-scroll">
+                        <GridPhotos images={images} />
+                    </div>
+                </div>
             </div>
-            <Carousel images={images} />
         </div>
     );
 };
