@@ -1,4 +1,4 @@
-import { FC, useCallback, useRef, useState } from "react";
+import { FC } from "react";
 
 import kaigan from "../../../assets/images/kaigan.jpg"
 import kaigan2 from "../../../assets/images/kaigan2.jpg"
@@ -6,8 +6,6 @@ import kibune from "../../../assets/images/kibune.jpg"
 import sakura from "../../../assets/images/sakura.jpg"
 import toudai from "../../../assets/images/toudai.jpg"
 import tunosima from "../../../assets/images/tunosima.jpg"
-import Carousel from "./Carousel";
-import useBodyScrollLock from "../../../hooks/useBodyScrollLock";
 import GridPhotos from "./GridPhotos";
 
 const FavoritePhoto: FC = () => {
