@@ -1,4 +1,4 @@
-import { FC, useCallback, useRef, useState } from "react";
+import { FC, useRef, useState } from "react";
 import useBodyScrollLock from "../../../hooks/useBodyScrollLock";
 import Carousel from "./Carousel";
 
