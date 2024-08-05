@@ -16,9 +16,9 @@ const GridPhotos: FC<Props> = ({ images }) => {
         setIsActive(true);
     };
 
-    const handleCloseModal = useCallback(() => {
+    const handleCloseModal = () => {
         setIsActive(false);
-    }, []);
+    };
 
     useBodyScrollLock({
         isActive,
@@ -28,7 +28,7 @@ const GridPhotos: FC<Props> = ({ images }) => {
     return (
         <>
         <div ref={target} className={`h-screen w-screen fixed top-0 left-0 ${isActive ? "animate-fade-in-fwd z-50" : "animate-fade-out-bck -z-10"}`}>
-            <Carousel images={images} firstView={isClickImage} closeAction={handleCloseModal} />
+            <Carousel images={images} clickImage={isClickImage} closeAction={handleCloseModal} />
         </div>
         <div className="grid grid-cols-2 gap-2">
             {images.map((image, index) => (

@@ -1,39 +1,16 @@
-import { createRef, FC, RefObject, useEffect, useRef, useState } from "react";
+import { FC } from "react";
 import { HiOutlineArrowCircleLeft, HiOutlineArrowCircleRight } from "react-icons/hi";
 import { IoIosCloseCircleOutline } from "react-icons/io";
+import useCurrentImage from "../../../hooks/useCurrentImage";
 
 type Props = {
     images: JSX.Element[];
-    firstView: number
+    clickImage: number
     closeAction: () => void;
 };
 
-const Carousel: FC<Props> = ({images, firstView, closeAction}) => {
-    const [currentImage, setCurrentImage] = useState<number>(firstView);
-    const scrollRef = useRef<HTMLDivElement>(null);
-    const imageRefs = useRef<RefObject<HTMLDivElement>[]>([]);
-
-    images.forEach((_, index) => {
-        imageRefs.current[index] = createRef<HTMLDivElement>();
-    });
-
-    useEffect(() => {
-        setCurrentImage(firstView);
-    }, [firstView]);
-
-    useEffect(() => {
-        if (currentImage < 0) {
-            setCurrentImage(0);
-        } else if (currentImage > images.length - 1) {
-            setCurrentImage(images.length - 1);
-        } else {
-            imageRefs.current[currentImage].current?.scrollIntoView({
-                behavior: "smooth",
-                block: "center",
-                inline: "center"
-            });
-        }
-    }, [currentImage]);
+const Carousel: FC<Props> = ({images, clickImage, closeAction}) => {
+    const {currentImage, imageRefs, setCurrentImage} = useCurrentImage({clickImage, imageArrLenth: images.length});
 
     return (
         <div className="h-full w-full bg-slate-700/70 p-5">
@@ -46,13 +23,11 @@ const Carousel: FC<Props> = ({images, firstView, closeAction}) => {
                 <div className="w-full h-1/2 flex justify-center gap-3 md:h-2/3">
                     <label
                     role="button"
-                    onClick={() => setCurrentImage(currentImage - 1)}
+                    onClick={() => setCurrentImage((prev) => prev - 1)}
                     className="h-full rounded-l-xl bg-slate-500/30 flex items-center" >
                         <HiOutlineArrowCircleLeft size={"2rem"} />
                     </label>
-                    <div
-                    ref={scrollRef}
-                    className="w-3/4 max-w-screen-md h-full flex gap-5 overflow-x-scroll snap-mandatory snap-x">
+                    <div className="w-3/4 max-w-screen-md h-full flex gap-5 overflow-x-scroll snap-mandatory snap-x">
                         {images.map((image, index) => (
                             <div key={index} ref={imageRefs.current[index]} className="min-w-full h-full snap-center">
                                 {image}
@@ -61,7 +36,7 @@ const Carousel: FC<Props> = ({images, firstView, closeAction}) => {
                     </div>
                     <label
                     role="button"
-                    onClick={() => setCurrentImage(currentImage + 1)}
+                    onClick={() => setCurrentImage((prev) => prev + 1)}
                     className="h-full rounded-r-xl bg-slate-500/30 flex items-center" >
                         <HiOutlineArrowCircleRight size={"2rem"} />
                     </label>
