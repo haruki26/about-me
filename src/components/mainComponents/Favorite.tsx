@@ -9,7 +9,6 @@ const Favorite: FC = () => {
             <div className="flex flex-col justify-center gap-10 md:flex-row md:gap-7">
                 <FavoritePhoto />
                 <Baking />
-                <Foods />
             </div>
         </div>
     );
