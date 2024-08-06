@@ -27,16 +27,8 @@ const FavoritePhoto: FC = () => {
 
     return (
         <div className="flex flex-col items-center gap-5">
-            <h2 className="text-3xl font-bold font-zenKurenaido text-center md:text-5xl">Photos</h2>
-            <div className="mockup-phone">
-                <div className="camera" />
-                <div className="display">
-                    <div className="artboard artboard-demo phone-1">
-                        <div className="w-full h-full flex flex-col gap-5 px-2 py-10 font-kosugiMaru overflow-scroll">
-                            <GridPhotos images={images} />
-                        </div>
-                    </div>
-                </div>
+            <div className="w-full h-full flex flex-col gap-5 px-2 py-10 font-kosugiMaru">
+                <GridPhotos images={images} />
             </div>
         </div>
     );
