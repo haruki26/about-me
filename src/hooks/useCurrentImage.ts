@@ -1,4 +1,5 @@
 import { createRef, RefObject, useEffect, useRef, useState } from "react";
+import useIntersectionObserver from "./useIntersectionObserver";
 
 type Props = {
     clickImage: number;
@@ -7,11 +8,28 @@ type Props = {
 
 const useCurrentImage = ({clickImage, imageArrLenth}: Props) => {
     const [currentImage, setCurrentImage] = useState<number>(clickImage);
-    const imageRefs = useRef<RefObject<HTMLDivElement>[]>([]);
 
+    const slideRef = useRef<HTMLDivElement>(null);
+    const imageRefs = useRef<RefObject<HTMLDivElement>[]>([]);
     for (let i = 0; i < imageArrLenth; i++) {
         imageRefs.current[i] = createRef<HTMLDivElement>();
     }
+
+    const scrollImage = (entries: IntersectionObserverEntry[]) => {
+        entries.forEach((entry, index) => {
+            if (entry.isIntersecting) {
+                setCurrentImage(index);
+            }
+        });
+    };
+
+    useIntersectionObserver(imageRefs.current, scrollImage,
+        {
+            root: slideRef.current,
+            threshold: 0.5
+        }
+    )
+
 
     useEffect(() => {
         setCurrentImage(clickImage);
@@ -31,7 +49,7 @@ const useCurrentImage = ({clickImage, imageArrLenth}: Props) => {
         }
     }, [currentImage]);
 
-    return {currentImage, imageRefs, setCurrentImage};
+    return {currentImage, slideRef, imageRefs, setCurrentImage};
 };
 
 export default useCurrentImage;
