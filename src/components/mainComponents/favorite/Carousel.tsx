@@ -10,7 +10,7 @@ type Props = {
 };
 
 const Carousel: FC<Props> = ({images, clickImage, closeAction}) => {
-    const {currentImage, imageRefs, setCurrentImage} = useCurrentImage({clickImage, imageArrLenth: images.length});
+    const {currentImage, slideRef, imageRefs, setCurrentImage} = useCurrentImage({clickImage, imageArrLenth: images.length});
 
     return (
         <div className="h-full w-full bg-slate-700/70 p-5">
@@ -27,7 +27,7 @@ const Carousel: FC<Props> = ({images, clickImage, closeAction}) => {
                     className="h-full rounded-l-xl bg-slate-500/30 flex items-center" >
                         <HiOutlineArrowCircleLeft size={"2rem"} />
                     </label>
-                    <div className="w-3/4 max-w-screen-md h-full flex gap-5 overflow-x-scroll snap-mandatory snap-x">
+                    <div ref={slideRef} className="w-3/4 max-w-screen-md h-full flex gap-5 overflow-x-scroll snap-mandatory snap-x">
                         {images.map((image, index) => (
                             <div key={index} ref={imageRefs.current[index]} className="min-w-full h-full snap-center">
                                 {image}
