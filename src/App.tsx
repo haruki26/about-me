@@ -42,34 +42,34 @@ const App: FC = () => {
   }
 
   return (
-    <>
-    <div className={`w-screen sticky top-0 z-50 ${isNavAnimate}`}>
-      <HeaderNavbar drawerState={isDrawerState} contentState={isContent} />
-    </div>
-    <div className="drawer w-screen">
-      <input id="drawer-menu" type="checkbox" checked={isDrawerState} className="drawer-toggle" onChange={changeDrawerState} readOnly />
-      <div className="drawer-content">
-        <div className="flex flex-col">
-          <header ref={targetRef}>
-            <div className="mx-2">
-              <FavoriteHead />
-            </div>
-          </header>
-          <main>
-            <div className="py-5">
-              <Favorite />
-            </div>
-          </main>
-          <footer>
-            <div className="w-full">
-              <FooterContent />
-            </div>
-          </footer>
+    <div className="w-screen">
+        <div className={`w-full sticky top-0 z-50 ${isNavAnimate}`}>
+        <HeaderNavbar drawerState={isDrawerState} contentState={isContent} />
         </div>
-      </div>
-      <DrawerMenu />
+        <div className="drawer w-full">
+        <input id="drawer-menu" type="checkbox" checked={isDrawerState} className="drawer-toggle" onChange={changeDrawerState} readOnly />
+        <div className="drawer-content">
+            <div className="flex flex-col">
+            <header ref={targetRef}>
+                <div className="mx-2">
+                <FavoriteHead />
+                </div>
+            </header>
+            <main>
+                <div className="py-5">
+                <Favorite />
+                </div>
+            </main>
+            <footer>
+                <div className="w-full">
+                <FooterContent />
+                </div>
+            </footer>
+            </div>
+        </div>
+        <DrawerMenu />
+        </div>
     </div>
-    </>
   );
 };
 
