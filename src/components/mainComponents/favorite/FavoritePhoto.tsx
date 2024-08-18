@@ -1,31 +1,41 @@
 import { FC } from "react";
-import Carousel from "./Carousel";
-
-import kaigan from "../../../assets/images/kaigan.jpg"
-import kaigan2 from "../../../assets/images/kaigan2.jpg"
-import kibune from "../../../assets/images/kibune.jpg"
-import sakura from "../../../assets/images/sakura.jpg"
-import toudai from "../../../assets/images/toudai.jpg"
-import tunosima from "../../../assets/images/tunosima.jpg"
 import { MdOutlineCameraAlt } from "react-icons/md";
+
+import kaigan from "../../../assets/images/kaigan.jpg";
+import dazaihu from "../../../assets/images/dazaihu.jpg";
+import kibune from "../../../assets/images/kibune.jpg";
+import kibune2 from "../../../assets/images/kibune2.jpg";
+import kosumosu from "../../../assets/images/kosumosu.jpg";
+import higanbana from "../../../assets/images/higanbana.jpg";
+import useModalControl from "../../../hooks/useModalContorol";
+import Modal from "./Modal";
+
 
 const FavoritePhoto: FC = () => {
     const images = [
-        (<img src={kaigan} alt="kaigan" className="w-full h-full object-cover" />),
-        (<img src={kaigan2} alt="kaigan2" className="w-full h-full object-cover" />),
-        (<img src={kibune} alt="kibune" className="w-full h-full object-cover" />),
-        (<img src={sakura} alt="sakura" className="w-full h-full object-cover" />),
-        (<img src={toudai} alt="toudai" className="w-full h-full object-cover" />),
-        (<img src={tunosima} alt="tunosima" className="w-full h-full object-cover" />)
+        kaigan, dazaihu, kibune, kibune2, kosumosu, higanbana
     ];
 
+    const {isVisivleModal, clickImage, modalRef, openModal, closeModal} = useModalControl();
+
     return (
-        <div className="flex flex-col items-center gap-3">
+        <div className="w-full flex flex-col items-center gap-3">
             <div className="flex gap-2">
                 <MdOutlineCameraAlt className="my-auto" size={"2rem"} />
                 <h2 className="font-kosugiMaru text-2xl md:text-3xl">Photo</h2>
             </div>
-            <Carousel images={images} />
+            <div className="w-full max-w-screen-sm px-3 grid grid-cols-2 grid-flow-row gap-2 md:max-w-screen-md md:grid-cols-3">
+                {images.map((image, index) => (
+                    <div key={`photo-${index}`} className="w-full" onClick={() => openModal(index)}>
+                        <img src={image} alt="photo" className="aspect-square object-cover rounded-lg" />
+                    </div> 
+                ))}
+            </div>
+            {isVisivleModal && (
+                <div ref={modalRef}>
+                    <Modal images={images} clickImage={clickImage} closeModalAct={closeModal} />
+                </div>
+            )}
         </div>
     );
 }

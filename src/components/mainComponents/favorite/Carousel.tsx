@@ -1,17 +1,31 @@
-import { FC } from "react";
+import { FC, useEffect, useRef } from "react";
 
 type Props = {
-    images: JSX.Element[];
+    images: string[];
+    clickImage: number;
 }
 
-const Carousel: FC<Props> = ({images}) => {
+const Carousel: FC<Props> = ({images, clickImage}) => {
+    const clickImageRef = useRef<HTMLDivElement>(null);
+
+    useEffect(() => {
+        clickImageRef.current?.scrollIntoView({
+            behavior: "instant",
+            block: "center",
+            inline: "center"
+        });
+    })
+
     return (
-        <div className="max-w-sm px-5">
-            <div className="carousel carousel-center rounded-box w-full space-x-4">
+        <div className="w-full h-full">
+            <div className="w-5/6 h-4/5 mx-auto flex gap-10 overflow-x-scroll hidden-scrollbar snap-x md:hidden">
                 {images.map((image, index) => (
-                    <div id={`item${index}`} key={index} className="carousel-item w-full h-96" >
-                        {image}
-                    </div>
+                    <div
+                    ref={(clickImage === index) ? clickImageRef : null}
+                    key={`photo-${index}`}
+                    className="min-w-full h-full snap-center">
+                        <img src={image} alt="photo" className="w-full h-full object-cover rounded-lg" />
+                    </div> 
                 ))}
             </div>
         </div>
