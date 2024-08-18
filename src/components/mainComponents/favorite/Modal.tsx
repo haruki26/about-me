@@ -32,7 +32,7 @@ const Modal: FC<Props> = ({
                     <button
                     onClick={closeModalAct}
                     className="h-full w-1/5 rounded-xl bg-slate-400/50">
-                        <span className="text-3xl underline">Close</span>
+                        <span className="text-2xl underline md:text-3xl">Close</span>
                     </button>
                 </div>
                 {isModalType ? (
