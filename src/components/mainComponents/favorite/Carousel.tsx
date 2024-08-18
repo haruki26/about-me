@@ -1,4 +1,4 @@
-import { FC, useEffect, useRef, useState } from "react";
+import { FC, useEffect, useRef } from "react";
 
 type Props = {
     images: string[];
@@ -7,7 +7,6 @@ type Props = {
 
 const Carousel: FC<Props> = ({images, clickImage}) => {
     const clickImageRef = useRef<HTMLDivElement>(null);
-    const [visivleImage, setVisibleImage] = useState<number>(clickImage);
 
     useEffect(() => {
         clickImageRef.current?.scrollIntoView({
@@ -16,16 +15,6 @@ const Carousel: FC<Props> = ({images, clickImage}) => {
             inline: "center"
         });
     })
-
-    const handleArrowBtn = (index: number) => {
-        if (index < 0) {
-            setVisibleImage(images.length - 1);
-        } else if (index >= images.length) {
-            setVisibleImage(0);
-        } else {
-            setVisibleImage(index);
-        }
-    }
 
     return (
         <div className="w-full h-full">
@@ -38,13 +27,6 @@ const Carousel: FC<Props> = ({images, clickImage}) => {
                         <img src={image} alt="photo" className="w-full h-full object-cover rounded-lg" />
                     </div> 
                 ))}
-            </div>
-            <div className="rounded-box w-full hidden md:inline">
-                <div className="flex justify-between">
-                    <button onClick={() => handleArrowBtn(visivleImage - 1)} className="bg-gray-200 p-2 rounded-full">{"<"}</button>
-                    <img src={images[visivleImage]} alt="carousel" className="w-full" />
-                    <button onClick={() => handleArrowBtn(visivleImage + 1)} className="bg-gray-200 p-2 rounded-full">{">"}</button>
-                </div>
             </div>
         </div>
     );

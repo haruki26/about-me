@@ -1,4 +1,4 @@
-import { createRef, FC, RefObject, useMemo, useRef, useState } from "react";
+import { FC } from "react";
 import { MdOutlineCameraAlt } from "react-icons/md";
 
 import kaigan from "../../../assets/images/kaigan.jpg";
@@ -7,7 +7,8 @@ import kibune from "../../../assets/images/kibune.jpg";
 import kibune2 from "../../../assets/images/kibune2.jpg";
 import kosumosu from "../../../assets/images/kosumosu.jpg";
 import higanbana from "../../../assets/images/higanbana.jpg";
-import Carousel from "./Carousel";
+import useModalControl from "../../../hooks/useModalContorol";
+import Modal from "./Modal";
 
 
 const FavoritePhoto: FC = () => {
@@ -15,14 +16,7 @@ const FavoritePhoto: FC = () => {
         kaigan, dazaihu, kibune, kibune2, kosumosu, higanbana
     ];
 
-    const [isVisivleModal, setIsVisibleModal] = useState<boolean>(false);
-    const [clickImage, setClickImage] = useState<number>(0);
-
-    const openModal = (index: number) => {
-        setClickImage(index);
-        setIsVisibleModal(true);
-    };
-
+    const {isVisivleModal, clickImage, modalRef, openModal, closeModal} = useModalControl();
 
     return (
         <div className="w-full flex flex-col items-center gap-3">
@@ -38,17 +32,10 @@ const FavoritePhoto: FC = () => {
                 ))}
             </div>
             {isVisivleModal && (
-                <div className="fixed top-0 left-0 w-screen h-screen bg-slate-700/70 z-50">
-                    <div className="w-full h-full flex flex-col">
-                        <div>
-                            <button onClick={() => setIsVisibleModal(false)} className="p-2 text-white">Close</button>
-                        </div>
-                        <Carousel images={images} clickImage={clickImage} />
-                    </div>
+                <div ref={modalRef}>
+                    <Modal images={images} clickImage={clickImage} closeModalAct={closeModal} />
                 </div>
-            )
-                
-            }
+            )}
         </div>
     );
 }
