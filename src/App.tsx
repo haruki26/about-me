@@ -52,12 +52,12 @@ const App: FC = () => {
                     <div className="flex flex-col">
                         <header ref={targetRef}>
                             <div className="mx-2">
-                                <FavoriteHead />
+                                <ProfielHead />
                             </div>
                         </header>
                         <main>
                             <div className="py-5">
-                                <Favorite />
+                                <Profiel />
                             </div>
                         </main>
                         <footer>
