@@ -14,7 +14,7 @@ import FavoriteHead from "./components/headerComponents/FavoriteHead";
 
 const App: FC = () => {
     const targetRef = useRef(null)
-    const [isContent, setIsContent] = useState<Contents>("Profiel")
+    const [isContent, setIsContent] = useState<Contents>("Favorite")
     const [isVisivle, setIsVisible] = useState<boolean>(false);
     const [isNavAnimate, setIsNavAnimate] = useState<HeaderNavAnimation>(useNavAnimation(isVisivle))
     const [isDrawerState, setIsDrawerState] = useState<boolean>(false)
