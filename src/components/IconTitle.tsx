@@ -5,6 +5,7 @@ type breakPoint = "md" | "lg" | "xl";
 type Props = {
     children: React.ReactNode;
     gap: number;
+    className?: string;
     breakPoint?: breakPoint | null;
     largeGap?: number;
 }
@@ -12,13 +13,14 @@ type Props = {
 const IconTitle: FC<Props> = ({
     children,
     gap,
+    className = "",
     breakPoint = null,
     largeGap = gap
 }) => {
     const [icon, title] = Children.toArray(children);
 
     return (
-        <div className={`flex gap-${gap} ${breakPoint !== null ? `${breakPoint}:${largeGap}` : ""}`}>
+        <div className={`flex ${className} gap-${gap} ${breakPoint !== null ? `${breakPoint}:${largeGap}` : ""}`}>
             <div className="my-auto">
                 {icon}
             </div>

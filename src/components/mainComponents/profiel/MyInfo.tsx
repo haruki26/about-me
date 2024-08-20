@@ -3,15 +3,16 @@ import { LuCake } from "react-icons/lu";
 import { MdOutlineCameraAlt } from "react-icons/md";
 import { RiAccountPinBoxLine } from "react-icons/ri";
 import { TbUserHeart } from "react-icons/tb";
+import IconTitle from "../../IconTitle";
 
 const MyInfo: FC = () => {
     const contents = [
         {
             title: (
-                <div className="flex gap-2">
-                    <RiAccountPinBoxLine size={"2rem"} />
+                <IconTitle gap={2}>
+                    <RiAccountPinBoxLine size={"2.5rem"} />
                     <h3>名前</h3>
-                </div>
+                </IconTitle>
             ),
             content: (
                 <div className="flex flex-col gap-2 md:flex-row">
@@ -22,10 +23,10 @@ const MyInfo: FC = () => {
         },
         {
             title: (
-                <div className="flex gap-2">
+                <IconTitle gap={2}>
                     <LuCake size={"2rem"} />
                     <h3>誕生日</h3>
-                </div>
+                </IconTitle>
             ),
             content: (
                 <p>8月26日</p>
@@ -33,10 +34,10 @@ const MyInfo: FC = () => {
         },
         {
             title: (
-                <div className="flex gap-2">
+                <IconTitle gap={2}>
                     <TbUserHeart size={"2rem"} />
                     <h3>MBTI</h3>
-                </div>
+                </IconTitle>
             ),
             content: (
                 <div className="flex flex-col gap-2 md:flex-row">
@@ -49,10 +50,10 @@ const MyInfo: FC = () => {
         },
         {
             title: (
-                <div className="flex gap-2">
+                <IconTitle gap={2}>
                     <MdOutlineCameraAlt size={"2rem"} />
                     <h3>趣味</h3>
-                </div>
+                </IconTitle>
             ),
             content: (
                 <ul className="list-none">
