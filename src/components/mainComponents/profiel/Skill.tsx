@@ -16,7 +16,7 @@ const Skill: FC = () => {
     return (
         <>
         <div className="p-2 flex gap-2">
-            <IconTitle gap={2} className="p-2">
+            <IconTitle className="p-2">
                 <TiSpannerOutline size={iconSize} />
                 <h2 className="font-zenKurenaido font-semibold text-5xl">Skil</h2>
             </IconTitle>
@@ -28,7 +28,7 @@ const Skill: FC = () => {
             </div>
             <div className="flex flex-col gap-5 md:flex-row md:justify-center md:gap-10">
                 <SkillSets className="font-kosugiMaru text-xl">
-                    <IconTitle gap={2} className="mx-auto">
+                    <IconTitle className="mx-auto">
                         <TbBooks size={"2.5rem"} />
                         <h3 className="text-2xl my-auto md:text-center">言語・ライブラリ<br />フレームワーク</h3>
                     </IconTitle>
@@ -40,7 +40,7 @@ const Skill: FC = () => {
                     <p>MicroPython / Arduino</p>
                 </SkillSets>
                 <SkillSets className="font-kosugiMaru text-xl">
-                    <IconTitle gap={2} className="mx-auto md:py-3">
+                    <IconTitle className="mx-auto md:py-3">
                         <TiPencil size={"2.5rem"} />
                         <h3 className="text-2xl my-auto md:text-center">資格・検定</h3>
                     </IconTitle>

@@ -4,7 +4,7 @@ type breakPoint = "md" | "lg" | "xl";
 
 type Props = {
     children: React.ReactNode;
-    gap: number;
+    gap?: number;
     className?: string;
     breakPoint?: breakPoint | null;
     largeGap?: number;
@@ -12,7 +12,7 @@ type Props = {
 
 const IconTitle: FC<Props> = ({
     children,
-    gap,
+    gap = 2,
     className = "",
     breakPoint = null,
     largeGap = gap

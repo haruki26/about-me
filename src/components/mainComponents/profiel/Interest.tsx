@@ -5,7 +5,7 @@ import IconTitle from "../../IconTitle";
 const Interest: FC = () => {
     return (
         <div className="w-5/6 flex flex-col gap-3 mx-auto">
-            <IconTitle gap={2} className="p-2">
+            <IconTitle className="p-2">
                 <AiOutlineDeploymentUnit size={"2.5rem"} />
                 <h2 className="font-zenKurenaido font-semibold text-5xl">Interest</h2>
             </IconTitle>

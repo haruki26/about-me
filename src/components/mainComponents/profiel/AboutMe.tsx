@@ -14,7 +14,7 @@ const AboutMe: FC = () => {
     
     return (
         <div className="w-full flex flex-col">
-            <IconTitle gap={2} className="p-2">
+            <IconTitle className="p-2">
                 <MdSentimentSatisfiedAlt size={iconSize} />
                 <h2 className="font-zenKurenaido font-semibold text-5xl md:text-7xl">About me</h2>
             </IconTitle>

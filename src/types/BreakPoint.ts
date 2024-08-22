@@ -1,1 +1,0 @@
-export type BreakPoint = "md" | "lg" | "xl";

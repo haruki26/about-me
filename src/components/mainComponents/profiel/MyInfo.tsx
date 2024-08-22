@@ -9,7 +9,7 @@ const MyInfo: FC = () => {
     const contents = [
         {
             title: (
-                <IconTitle gap={2}>
+                <IconTitle>
                     <RiAccountPinBoxLine size={"2.5rem"} />
                     <h3>名前</h3>
                 </IconTitle>
@@ -23,7 +23,7 @@ const MyInfo: FC = () => {
         },
         {
             title: (
-                <IconTitle gap={2}>
+                <IconTitle>
                     <LuCake size={"2rem"} />
                     <h3>誕生日</h3>
                 </IconTitle>
@@ -34,7 +34,7 @@ const MyInfo: FC = () => {
         },
         {
             title: (
-                <IconTitle gap={2}>
+                <IconTitle>
                     <TbUserHeart size={"2rem"} />
                     <h3>MBTI</h3>
                 </IconTitle>
@@ -50,7 +50,7 @@ const MyInfo: FC = () => {
         },
         {
             title: (
-                <IconTitle gap={2}>
+                <IconTitle>
                     <MdOutlineCameraAlt size={"2rem"} />
                     <h3>趣味</h3>
                 </IconTitle>
