@@ -6,7 +6,7 @@ const HeaderContent: FC = () => {
         <>
         <div className="px-3 py-2">
             <div className="w-full flex flex-col items-center">
-                <div className="max-w-screen-lg px-2 py-2 md:min-w-[784]">
+                <div className="max-w-5xl px-2 py-2 md:min-w-[784]">
                     <FirstView />
                 </div>
             </div>

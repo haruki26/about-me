@@ -5,7 +5,7 @@ import Food from "./favorite/Food";
 
 const Favorite: FC = () => {
     return (
-        <div className="p-5 w-full">
+        <div className="w-full overflow-x-hidden">
             <div className="flex flex-col justify-center gap-10 md:gap-3">
                 <FavoritePhoto />
                 <Baking />

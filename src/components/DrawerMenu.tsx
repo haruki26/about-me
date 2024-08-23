@@ -2,31 +2,14 @@ import { FC } from "react"
 
 const DrawerMenu: FC = () => {
     return (
-        <div className="drawer-side">
+        <div className="w-full drawer-side">
             <label htmlFor="drawer-menu" aria-label="close sideber" className="drawer-overlay" />
-            <div className="w-full h-screen bg-slate-800 pt-20 md:pt-28">
-                <div className="join join-vertical w-full">
-                    <div className="collapse collapse-arrow join-item border-base-300 border">
-                        <input type="radio" name="my-accordion-4" defaultChecked />
-                        <div className="collapse-title text-xl font-medium">Home</div>
-                        <div className="collapse-content">
-                            <p>hello</p>
-                        </div>
-                    </div>
-                    <div className="collapse collapse-arrow join-item border-base-300 border">
-                        <input type="radio" name="my-accordion-4" />
-                        <div className="collapse-title text-xl font-medium">Click to open this one and close others</div>
-                        <div className="collapse-content">
-                            <p>hello</p>
-                        </div>
-                    </div>
-                    <div className="collapse collapse-arrow join-item border-base-300 border">
-                        <input type="radio" name="my-accordion-4" />
-                        <div className="collapse-title text-xl font-medium">Click to open this one and close others</div>
-                            <div className="collapse-content">
-                            <p>hello</p>
-                        </div>
-                    </div>
+            <div className="w-full h-screen bg-slate-800">
+                <div className="m-auto flex flex-col gap-5">
+                    <span className="text-2xl text-center">Home</span>
+                    <span className="text-2xl text-center">Profiel</span>
+                    <span className="text-2xl text-center">Favorite</span>
+                    <span className="text-2xl text-center">Contact</span>
                 </div>
             </div>
         </div>

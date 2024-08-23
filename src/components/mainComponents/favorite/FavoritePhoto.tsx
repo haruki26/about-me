@@ -33,7 +33,7 @@ const FavoritePhoto: FC = () => {
                 <MdOutlineCameraAlt size={isIconSize} />
                 <h2 className="font-kosugiMaru text-2xl md:text-3xl">Photo</h2>
             </IconTitle>
-            <div className="w-full max-w-screen-sm px-3 grid grid-cols-2 grid-flow-row gap-2 md:max-w-screen-md md:grid-cols-3">
+            <div className="w-full max-w-2xl px-3 grid grid-cols-2 grid-flow-row gap-2 md:max-w-3xl md:grid-cols-3">
                 {images.map((image, index) => (
                     <div key={`photo-${index}`} className="w-full" onClick={() => openModal(index)}>
                         <img src={image} alt="photo" className="aspect-square object-cover rounded-lg" />

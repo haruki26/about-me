@@ -11,7 +11,7 @@ const TopBackBtn: FC = () => {
 
     return (
         <label className="flex flex-col items-center">
-            <button className="hover:bg-slate-700" onClick={returnTop}>
+            <button className="" onClick={returnTop}>
                 <TiArrowUpOutline size={"2.5rem"}/>
             </button>
             <span className="font-zenKurenaido font-semibold">Page Top</span>

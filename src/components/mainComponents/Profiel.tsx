@@ -4,7 +4,7 @@ import Skil from "./profiel/Skill";
 
 const Profiel: FC = () => {
     return (
-        <div className="p-1 max-w-screen-md flex flex-col gap-5 mx-auto">
+        <div className="p-1 max-w-3xl flex flex-col gap-5 mx-auto">
             <AboutMe />
             <Skil />
         </div>

@@ -30,7 +30,7 @@ const Contact: FC = () => {
     };
 
     return (
-        <div className="max-w-screen-sm mx-auto">
+        <div className="max-w-2xl mx-auto">
             <div className="mx-3 mockup-browser bg-slate-900 border">
                 <div className="mockup-browser-toolbar">
                     <div className={`input ${isUrlColor}`}>{isUrlMessage}</div>

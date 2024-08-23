@@ -1,20 +1,22 @@
-import FooterContent from "./components/FooterContent";
-import { ChangeEvent, FC, useEffect, useRef, useState } from "react";
-import useNavAnimation from "./hooks/useNavAnimation";
-import useOnScreen from "./hooks/useOnScreen";
-import { HeaderNavAnimation } from "./types/HeaderNavAnimation";
-import { TargetViewPosition } from "./types/TargetViewPosition";
+import { ChangeEvent, Children, ReactNode, useEffect, useRef, useState } from "react";
+
 import HeaderNavbar from "./components/headerComponents/HeaderNavbar";
 import DrawerMenu from "./components/DrawerMenu";
-import ProfielHead from "./components/headerComponents/ProfielHead";
-import Profiel from "./components/mainComponents/Profiel";
-import { Contents } from "./types/Contents";
-import Favorite from "./components/mainComponents/Favorite";
-import FavoriteHead from "./components/headerComponents/FavoriteHead";
+import FooterContent from "./components/FooterContent";
+import useNavAnimation from "./hooks/useNavAnimation";
+import useOnScreen from "./hooks/useOnScreen";
 
-const App: FC = () => {
+import { Contents } from "./types/Contents";
+import { HeaderNavAnimation } from "./types/HeaderNavAnimation";
+import { TargetViewPosition } from "./types/TargetViewPosition";
+
+type Props = {
+    content: Contents;
+    children: ReactNode;
+}
+
+const PageFrame = ({content, children}: Props) => {
     const targetRef = useRef(null)
-    const [isContent, setIsContent] = useState<Contents>("Favorite")
     const [isVisivle, setIsVisible] = useState<boolean>(false);
     const [isNavAnimate, setIsNavAnimate] = useState<HeaderNavAnimation>(useNavAnimation(isVisivle))
     const [isDrawerState, setIsDrawerState] = useState<boolean>(false)
@@ -28,34 +30,38 @@ const App: FC = () => {
             setIsVisible(true)
         }
 
-        if (isContent === "Home") {
+        if (content === "Home") {
             setIsVisible(false)
         } else {
             setIsVisible(true)
         }
         
         setIsNavAnimate(useNavAnimation(isVisivle))
-    }, [targetViewPosition, isContent])
+    }, [targetViewPosition, content])
 
     const changeDrawerState = (event: ChangeEvent<HTMLInputElement>) => {
         setIsDrawerState(event.target.checked)
     }
 
+    const [header, main] = Children.toArray(children);
+    
     return (
         <div className="w-screen overflow-x-hidden">
-            <div className={`w-full sticky top-0 z-10 ${isNavAnimate}`}>
-                <HeaderNavbar drawerState={isDrawerState} contentState={isContent} />
+            <div className={`w-full sticky top-0 z-50 ${isNavAnimate}`}>
+                <HeaderNavbar drawerState={isDrawerState} contentState={content} />
             </div>
-            <div className="drawer w-full z-0">
+            <div className="drawer w-full">
                 <input id="drawer-menu" type="checkbox" checked={isDrawerState} className="drawer-toggle" onChange={changeDrawerState} readOnly />
                 <div className="drawer-content">
                     <div className="flex flex-col">
                         <header ref={targetRef}>
                             <div className="mx-2">
+                                {header}
                             </div>
                         </header>
                         <main>
                             <div className="py-5">
+                                {main}
                             </div>
                         </main>
                         <footer>
@@ -71,4 +77,4 @@ const App: FC = () => {
     );
 };
 
-export default App;
+export default PageFrame;
