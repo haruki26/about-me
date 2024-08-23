@@ -1,5 +1,5 @@
 import { FC } from "react";
-import icon from "../../assets/images/icon.jpg"
+import icon from "./../../../assets/images/icon.jpg"
 
 const ProfieilThumbnail: FC = () => {
     return (

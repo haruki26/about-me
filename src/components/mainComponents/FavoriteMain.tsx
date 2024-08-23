@@ -3,9 +3,9 @@ import FavoritePhoto from "./favorite/FavoritePhoto";
 import Baking from "./favorite/Baking";
 import Food from "./favorite/Food";
 
-const Favorite: FC = () => {
+const FavoriteMain: FC = () => {
     return (
-        <div className="w-full overflow-x-hidden">
+        <div className="w-full">
             <div className="flex flex-col justify-center gap-10 md:gap-3">
                 <FavoritePhoto />
                 <Baking />
@@ -15,4 +15,4 @@ const Favorite: FC = () => {
     );
 };
 
-export default Favorite;
+export default FavoriteMain;

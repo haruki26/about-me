@@ -1,5 +1,5 @@
 import { FC } from "react";
-import appview from "../../assets/images/appview.png";
+import appview from "../../../assets/images/appview.png";
 
 const CreateThumbnail: FC = () => {
     return (

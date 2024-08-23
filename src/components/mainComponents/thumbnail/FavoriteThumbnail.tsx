@@ -1,6 +1,6 @@
 import { FC } from "react";
-import tart from "./../../assets/images/tart.jpg"
-import sea from "./../../assets/images/kaigan.jpg"
+import tart from "./../../../assets/images/tart.jpg"
+import sea from "./../../../assets/images/kaigan.jpg"
 
 const FavoriteThumbnail: FC = () => {
     return (
