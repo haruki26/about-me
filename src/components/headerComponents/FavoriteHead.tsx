@@ -2,8 +2,10 @@ import { FC } from "react";
 
 const FavoriteHead: FC = () => {
     return (
-        <>
-        </>
+        <div className="w-full h-3/4 flex flex-col items-center justify-center">
+            <h1 className="text-7xl text-center">Favorite</h1>
+            <p className="text-4xl">好きなものを紹介します</p>
+        </div>
     );
 };
 

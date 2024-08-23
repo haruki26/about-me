@@ -6,11 +6,7 @@ import { HeaderNavAnimation } from "./types/HeaderNavAnimation";
 import { TargetViewPosition } from "./types/TargetViewPosition";
 import HeaderNavbar from "./components/headerComponents/HeaderNavbar";
 import DrawerMenu from "./components/DrawerMenu";
-import ProfielHead from "./components/headerComponents/ProfielHead";
-import Profiel from "./components/mainComponents/Profiel";
 import { Contents } from "./types/Contents";
-import Favorite from "./components/mainComponents/Favorite";
-import FavoriteHead from "./components/headerComponents/FavoriteHead";
 
 const App: FC = () => {
     const targetRef = useRef(null)
