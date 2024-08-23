@@ -7,6 +7,8 @@ import { TargetViewPosition } from "./types/TargetViewPosition";
 import HeaderNavbar from "./components/headerComponents/HeaderNavbar";
 import DrawerMenu from "./components/DrawerMenu";
 import { Contents } from "./types/Contents";
+import ProfielHead from "./components/headerComponents/ProfielHead";
+import ProfielMain from "./components/mainComponents/ProfielMain";
 
 const App: FC = () => {
     const targetRef = useRef(null)
@@ -39,7 +41,7 @@ const App: FC = () => {
 
     return (
         <div className="w-screen overflow-x-hidden">
-            <div className={`w-full sticky top-0 z-10 ${isNavAnimate}`}>
+            <div className={`w-full sticky top-0 left-0 z-10 ${isNavAnimate}`}>
                 <HeaderNavbar drawerState={isDrawerState} contentState={isContent} />
             </div>
             <div className="drawer w-full z-0">
@@ -52,6 +54,7 @@ const App: FC = () => {
                         </header>
                         <main>
                             <div className="py-5">
+                                <ProfielMain />
                             </div>
                         </main>
                         <footer>
