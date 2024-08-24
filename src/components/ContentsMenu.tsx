@@ -57,12 +57,12 @@ const ContentsMenu: FC<Props> = ({
                 </li>
                 <li>
                     <label className="mx-auto">
-                        <link to="/contact">
+                        <Link to="/contact">
                             <IconTitle>
                                 <RiMailSendFill size={iconSize} />
                                 <span  className={textSize}>Contact</span>
                             </IconTitle>
-                        </link>
+                        </Link>
                     </label>
                 </li>
             </ul>
