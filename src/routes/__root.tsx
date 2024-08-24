@@ -18,9 +18,16 @@ const Root = () => {
             setIsContent("Favorite")
         } else if(location.pathname === "/profiel") {
             setIsContent("Profiel")
+        } else if(location.pathname === "/contact") {
+            setIsContent("Contact")
         }
 
         setIsDrawerState(false)
+        window.scrollTo({
+            top: 0,
+            behavior: "instant",
+        })
+
     }, [location])
 
     return (
@@ -47,6 +54,7 @@ const Root = () => {
                 </div>
                 <DrawerMenu />
             </div>
+            {/* <TanStackRouterDevtools /> */}
         </div>
     );
 };
