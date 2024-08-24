@@ -5,7 +5,7 @@ import Thumbnails from "./mainComponents/Thumbnails";
 
 const Home: FC = () => {
     return (
-        <PageFrame content="Home">
+        <PageFrame>
             <FirstView />
             <Thumbnails />
         </PageFrame>

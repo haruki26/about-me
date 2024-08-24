@@ -5,7 +5,7 @@ import ProfielMain from "./mainComponents/ProfielMain";
 
 const Profiel: FC = () => {
     return (
-        <PageFrame content="Profiel">
+        <PageFrame>
             <ProfielHead />
             <ProfielMain />
         </PageFrame>

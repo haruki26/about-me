@@ -1,5 +1,5 @@
 import { FC } from "react";
-import ContentsMenu from "./footerComponents/ContentsMenu";
+import ContentsMenu from "./ContentsMenu";
 import ThemeChangeBtn from "./footerComponents/ThemeChangeBtn";
 import TopBackBtn from "./footerComponents/TopBackBtn";
 
@@ -8,7 +8,7 @@ const FooterContent: FC = () => {
         <div className="w-full bg-slate-800 px-3 py-2">
             <div className="flex justify-center gap-1 lg:py-5">
                 <div>
-                    <ContentsMenu />
+                    <ContentsMenu menuSize="xs" textSize="text-xl" iconSize="1.75rem" />
                 </div>
                 <div className="flex flex-col px-9 my-auto gap-5 lg:flex-row lg:items-center lg:gap-10">
                     <TopBackBtn />

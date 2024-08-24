@@ -1,6 +1,6 @@
 import { ChangeEvent, FC, FormEvent, useState } from "react";
 
-const Contact: FC = () => {
+const ContactMain: FC = () => {
     const [isName, setIsName] = useState<string>("");
     const [isEmail, setIsEmail] = useState<string>("");
     const [isMessage, setIsMessage] = useState<string>("");
@@ -71,4 +71,4 @@ const Contact: FC = () => {
     );
 }
 
-export default Contact;
+export default ContactMain;
