@@ -23,7 +23,7 @@ const Carousel: FC<Props> = ({images, clickImage}) => {
                     <div
                     ref={(clickImage === index) ? clickImageRef : null}
                     key={`photo-${index}`}
-                    className="min-w-full h-full snap-center">
+                    className="min-w-full h-4/5 my-auto snap-center">
                         <img src={image} alt="photo" className="w-full h-full object-cover rounded-lg" />
                     </div> 
                 ))}
