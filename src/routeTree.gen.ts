@@ -15,6 +15,7 @@ import { createFileRoute } from '@tanstack/react-router'
 import { Route as rootRoute } from './routes/__root'
 import { Route as ProfielImport } from './routes/profiel'
 import { Route as FavoriteImport } from './routes/favorite'
+import { Route as CreateImport } from './routes/create'
 import { Route as ContactImport } from './routes/contact'
 
 // Create Virtual Routes
@@ -30,6 +31,11 @@ const ProfielRoute = ProfielImport.update({
 
 const FavoriteRoute = FavoriteImport.update({
   path: '/favorite',
+  getParentRoute: () => rootRoute,
+} as any)
+
+const CreateRoute = CreateImport.update({
+  path: '/create',
   getParentRoute: () => rootRoute,
 } as any)
 
@@ -61,6 +67,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ContactImport
       parentRoute: typeof rootRoute
     }
+    '/create': {
+      id: '/create'
+      path: '/create'
+      fullPath: '/create'
+      preLoaderRoute: typeof CreateImport
+      parentRoute: typeof rootRoute
+    }
     '/favorite': {
       id: '/favorite'
       path: '/favorite'
@@ -83,6 +96,7 @@ declare module '@tanstack/react-router' {
 export const routeTree = rootRoute.addChildren({
   IndexLazyRoute,
   ContactRoute,
+  CreateRoute,
   FavoriteRoute,
   ProfielRoute,
 })
@@ -97,6 +111,7 @@ export const routeTree = rootRoute.addChildren({
       "children": [
         "/",
         "/contact",
+        "/create",
         "/favorite",
         "/profiel"
       ]
@@ -106,6 +121,9 @@ export const routeTree = rootRoute.addChildren({
     },
     "/contact": {
       "filePath": "contact.tsx"
+    },
+    "/create": {
+      "filePath": "create.tsx"
     },
     "/favorite": {
       "filePath": "favorite.tsx"

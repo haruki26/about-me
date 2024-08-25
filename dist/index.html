@@ -5,8 +5,18 @@
     <link rel="icon" type="image/svg+xml" href="./vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite + React + TS</title>
-    <script type="module" crossorigin src="./assets/index-ChuyEp5W.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-8NCfDY1M.css">
+    <script>
+      // GitHub Pages での SPA アドレス解決用
+      (function(){
+        const query = window.location.search;
+        if (query.startsWith('?p=')) {
+          const route = decodeURIComponent(query.substr(3));
+          window.history.replaceState(null, null, route);
+        }
+      })();
+    </script>
+    <script type="module" crossorigin src="./assets/index-TKeVr3AT.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-CaoXmcWb.css">
   </head>
   <body>
     <div id="root"></div>

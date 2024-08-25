@@ -65,6 +65,16 @@ const ContentsMenu: FC<Props> = ({
                         </Link>
                     </label>
                 </li>
+                <li>
+                    <label className="mx-auto">
+                        <Link to="/create">
+                            <IconTitle>
+                                <GiGears size={iconSize} />
+                                <span  className={textSize}>Create</span>
+                            </IconTitle>
+                        </Link>
+                    </label>
+                </li>
             </ul>
         </div>
         

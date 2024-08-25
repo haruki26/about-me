@@ -20,6 +20,8 @@ const Root = () => {
             setIsContent("Profiel")
         } else if(location.pathname === "/contact") {
             setIsContent("Contact")
+        } else if(location.pathname === "/create") {
+            setIsContent("Create")
         }
 
         setIsDrawerState(false)
