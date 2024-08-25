@@ -9,7 +9,7 @@
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "format": "prettier --write src",
-    "rebuild": "rm -rf ./dist && vite build && cp ./dist/index.html ./dist/404.html",
+    "rebuild": "rm -rf ./dist && vite build",
     "git": "git add . && git commit && git push origin main"
   },
   "dependencies": {
