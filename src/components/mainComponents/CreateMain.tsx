@@ -45,6 +45,13 @@ const CreateMain: FC = () => {
                     </p>
                     <p className="text-lg">
                         認証機能などを実装する予定はないので、リダイレクトのみするようにしています。
+                        TanStackRouter内でパスが一致しなくなるので
+                        <a
+                        href="https://tanstack.com/router/latest/docs/framework/react/guide/history-types#memory-routing" 
+                        className="underline">
+                            メモリールーティング
+                        </a>
+                        にする必要がありました。
                     </p>
                     <p className="text-lg">
                         リダイレクトしてる関係か404ページがちらつくので気になったらVercelとかのSPA対応してるのにしたほうがはやそう。
