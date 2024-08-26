@@ -11,20 +11,6 @@ const Root = () => {
     const [isContent, setIsContent] = useState<Contents>("Home")
     const location = useLocation()
 
-    const rewritePath = (path: string) => {
-        if(path === "/") {
-            window.history.replaceState(null, "", "/")
-        } else if(path === "/favorite") {
-            return "Favorite"
-        } else if(path === "/profiel") {
-            return "Profiel"
-        } else if(path === "/contact") {
-            return "Contact"
-        } else if(path === "/create") {
-            return "Create"
-        }
-    }
-
     useEffect(() => {
         if(location.pathname === "/") {
             setIsContent("Home")
@@ -38,6 +24,7 @@ const Root = () => {
             setIsContent("Create")
         }
 
+        window.history.replaceState(null, "", location.pathname)
         setIsDrawerState(false)
         window.scrollTo({
             top: 0,

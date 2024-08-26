@@ -5,13 +5,7 @@
         <title>My App</title>
         <script>
             ((l) => {
-                const paths = l.pathname.split("/");
-                const newpath = paths.length < 2 ? paths[0] : paths[0] + paths[1].join("/#");
-
-                l.replace(
-                    l.origin + "/" 
-                    + newpath
-                );
+                l.replace(l.origin + "/#" + l.pathname);
             })(window.location)
         </script>
     </head>
