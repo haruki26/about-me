@@ -35,15 +35,17 @@ const CreateMain: FC = () => {
             <div className="p-5 flex flex-col gap-4">
                 <h3 className="text-2xl">詰まった点</h3>
                 <div className="flex flex-col gap-2">
-                    <h4 className="text-xl">Github PagesがSPAに対応してない</h4>
+                    <h4 className="text-xl">GitHub PagesがSPAに対応してない</h4>
                     <p className="text-lg">
                         サイトを開くと404エラーが出ていました。
-                        <a href="https://maku.blog/p/9u8it5f/" className="underline">
+                        <a href="https://github.com/rafgraph/spa-github-pages" className="underline">
                             こちら
                         </a>
                         を参考にして解決しました。
                     </p>
-                    <p className="text-lg">URLを分解して再構築しリダイレクトしたりしているそうです。すごい。</p>
+                    <p className="text-lg">
+                        
+                    </p>
                     <p className="text-lg">
                         リダイレクトしてる関係か404ページがちらつくので気になったらVercelとかのSPA対応してるのにしたほうがはやそう。
                     </p>
