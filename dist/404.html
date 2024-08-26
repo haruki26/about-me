@@ -5,7 +5,13 @@
         <title>My App</title>
         <script>
             ((l) => {
-                l.replace(l.origin + "/#" + l.pathname);
+                const paths = l.pathname.split("/");
+                const newpath = paths.length < 2 ? paths[0] : paths.join("/#");
+
+                l.replace(
+                    l.origin + "/" 
+                    + l.pathname.substring(0, l.pathname.IndexOf("/"))
+                );
             })(window.location)
         </script>
     </head>
