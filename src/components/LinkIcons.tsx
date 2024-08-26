@@ -1,3 +1,4 @@
+import { Link } from "@tanstack/react-router";
 import { FC } from "react";
 import { FaGithub, FaInstagram } from "react-icons/fa";
 import { RiMailSendFill } from "react-icons/ri";
@@ -19,9 +20,9 @@ const LinkIcons: FC<Props> = ({size, color}) => {
         <a href="https://www.instagram.com/yousei_81" className="tooltip mytooltipcolor" data-tip="Instagram">
             <FaInstagram size={iconSize} color={iconColor} />
         </a>
-        <a href="#" className="tooltip mytooltipcolor" data-tip="Contact">
+        <Link to="/contact" className="tooltip mytooltipcolor" data-tip="Contact">
             <RiMailSendFill size={iconSize} color={iconColor} />
-        </a>
+        </Link>
         </>
     );
 };
