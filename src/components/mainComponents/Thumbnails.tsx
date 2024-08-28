@@ -1,7 +1,7 @@
 import { FC } from "react";
-import CreateThumbnail from "./thumbnail/CreateThumbnail";
-import FavoriteThumbnail from "./thumbnail/FavoriteThumbnail";
-import ProfieilThumbnail from "./thumbnail/ProfielThumbnail";
+import { CreateThumbnail } from "./thumbnail/CreateThumbnail";
+import { FavoriteThumbnail } from "./thumbnail/FavoriteThumbnail";
+import { ProfieilThumbnail } from "./thumbnail/ProfielThumbnail";
 
 const Thumbnails: FC = () => {
     return (
