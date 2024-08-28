@@ -1,1 +1,0 @@
-export type TargetViewPosition = undefined | "ABOVE_VIEWPORT" | "BELWO_VIEWPORT" | "VISIBLE";

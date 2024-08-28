@@ -21,13 +21,11 @@ const Food: FC = () => {
     ]
 
     const {isVisivleModal, clickImage, modalRef, openModal, closeModal} = useModalControl();
-    const isIconSize = useIconSize(
-        {
-            iconSize: 2,
-            breakPoint: "md",
-            largeIconSize: 2.5
-        }
-    );
+    const isIconSize = useIconSize({
+        iconSize: 2,
+        breakPoint: "md",
+        largeIconSize: 2.5
+    });
 
     const [isSection, setIsSection] = useState<number>(0);
 
@@ -37,7 +35,7 @@ const Food: FC = () => {
     }
 
     return (
-        <div className="flex flex-col items-center gap-5">
+        <div className="flex flex-col px-3 items-center gap-5">
             <IconTitle gap={2} >
                 <MdOutlineFoodBank size={isIconSize} />
                 <h2 className="font-kosugiMaru text-2xl md:text-3xl">Food</h2>

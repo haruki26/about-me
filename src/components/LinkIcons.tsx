@@ -14,13 +14,22 @@ const LinkIcons: FC<Props> = ({size, color}) => {
 
     return (
         <>
-        <a href="https://github.com/haruki26" className="tooltip mytooltipcolor" data-tip="Github">
+        <a
+        href="https://github.com/haruki26"
+        className="tooltip tooltip-bottom mytooltipcolor"
+        data-tip="Github">
             <FaGithub size={iconSize} color={iconColor} />
         </a>
-        <a href="https://www.instagram.com/yousei_81" className="tooltip mytooltipcolor" data-tip="Instagram">
+        <a
+        href="https://www.instagram.com/yousei_81"
+        className="tooltip tooltip-bottom mytooltipcolor"
+        data-tip="Instagram">
             <FaInstagram size={iconSize} color={iconColor} />
         </a>
-        <Link to="/contact" className="tooltip mytooltipcolor" data-tip="Contact">
+        <Link
+        to="/contact"
+        className="tooltip tooltip-bottom mytooltipcolor"
+        data-tip="Contact">
             <RiMailSendFill size={iconSize} color={iconColor} />
         </Link>
         </>
