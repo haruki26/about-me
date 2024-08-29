@@ -26,7 +26,7 @@ const Modal: FC<Props> = ({
     }, [width]);
 
     return (
-        <div className="fixed top-0 left-0 w-full h-screen bg-slate-700/70 z-50">
+        <div className="fixed top-0 left-0 w-screen h-screen bg-slate-700/70 z-50">
             <div className="w-full h-full">
                 <div className="w-full h-1/6 p-3">
                     <button

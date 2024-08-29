@@ -1,7 +1,7 @@
-import { FC, useState } from "react";
+import { FC, useContext } from "react";
 import { MdOutlineFoodBank } from "react-icons/md";
-import useModalControl from "../../../hooks/useModalContorol";
-import Modal from "./Modal";
+
+import { ModalContext } from "../../Root";
 
 import ramen from "../../../assets/images/ramen.jpg";
 import jirou from "../../../assets/images/jirou.jpg";
@@ -20,19 +20,13 @@ const Food: FC = () => {
         [zenzai, eggtart]
     ]
 
-    const {isVisivleModal, clickImage, modalRef, openModal, closeModal} = useModalControl();
+    const {openModal} = useContext(ModalContext);
+    
     const isIconSize = useIconSize({
         iconSize: 2,
         breakPoint: "md",
         largeIconSize: 2.5
     });
-
-    const [isSection, setIsSection] = useState<number>(0);
-
-    const handleModal = (section: number, clickImage: number) => {
-        setIsSection(section);
-        openModal(clickImage);
-    }
 
     return (
         <div className="flex flex-col px-3 items-center gap-5">
@@ -48,7 +42,7 @@ const Food: FC = () => {
                         alt="ramen"
                         className="aspect-square object-cover rounded-lg"
                         key={`ramen-${index}`}
-                        onClick={() => handleModal(0, index)} />
+                        onClick={() => openModal(sectionImgs[0], index)} />
                     ))}
                 </div>
                 <div className="font-kosugiMaru text-xl md:text-2xl">
@@ -64,7 +58,7 @@ const Food: FC = () => {
                         alt="curry"
                         className="aspect-square object-cover rounded-lg"
                         key={`curry-${index}`}
-                        onClick={() => handleModal(1, index)} />
+                        onClick={() => openModal(sectionImgs[1], index)} />
                     ))}
                 </div>
                 <div className="font-kosugiMaru text-xl md:text-2xl">
@@ -80,7 +74,7 @@ const Food: FC = () => {
                         alt="zenzai"
                         className="aspect-square object-cover rounded-lg"
                         key={`zenzai-${index}`}
-                        onClick={() => handleModal(2, index)} />
+                        onClick={() => openModal(sectionImgs[2], index)} />
                     ))}
                 </div>
                 <div className="font-kosugiMaru text-xl md:text-2xl">
@@ -88,11 +82,6 @@ const Food: FC = () => {
                     <p>アンドリューのエッグタルトは是非食べてみてほしいです</p>
                 </div>
             </ImageContents>
-            {isVisivleModal && (
-                <div ref={modalRef}>
-                    <Modal images={sectionImgs[isSection]} clickImage={clickImage} closeModalAct={closeModal} />
-                </div>
-            )}
         </div>
     )
 }
