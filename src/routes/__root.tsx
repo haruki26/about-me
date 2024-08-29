@@ -30,11 +30,10 @@ const Root = () => {
             top: 0,
             behavior: "smooth",
         })
-
     }, [location])
 
     return (
-        <div className="w-full">
+        <div className="w-full relative">
             <div className={`w-full ${isContent === "Home"? "fixed": "sticky"} top-0 left-0 z-10`}>
                 <HeaderNavbar drawerState={isDrawerState} contentState={isContent} />
             </div>
