@@ -1,19 +1,19 @@
-import { FC, useState } from "react";
+import { FC, useContext } from "react";
 import { LuCakeSlice } from "react-icons/lu";
 
 import bushdenoel from "../../../assets/images/bushbenoel.jpg"
 import cake from "../../../assets/images/cake.jpg"
 import cheesecake from "../../../assets/images/cheesecake.jpg"
 import tart from "../../../assets/images/tart.jpg"
-import useModalControl from "../../../hooks/useModalContorol";
-import Modal from "./Modal";
 import useWindowSize from "../../../hooks/useWindowSize";
 import useIconSize from "../../../hooks/useIconSize";
 import IconTitle from "../../IconTitle";
 import ImageContents from "./ImageContents";
+import { ModalContext } from "../../Root";
 
 const Baking: FC = () => {
-    const {isVisivleModal, clickImage, modalRef, openModal, closeModal} = useModalControl();
+    const {openModal} = useContext(ModalContext)
+
     const [width] = useWindowSize();
     const isIconSize = useIconSize(
         {
@@ -23,12 +23,9 @@ const Baking: FC = () => {
         }
     )
 
-    const [isImage, setIsImage] = useState<string>("");
-
     const handleModal = (image: string) => {
         if (width > 768) {
-            setIsImage(image);
-            openModal(0);
+            openModal([image], 0);
         }
     }
 
@@ -92,11 +89,6 @@ const Baking: FC = () => {
                     </ImageContents>
                 </div>
             </div>
-            {isVisivleModal && (
-                <div ref={modalRef}>
-                    <Modal images={[isImage]} clickImage={clickImage} closeModalAct={closeModal} />
-                </div>
-            )}
         </div>
     );
 };
