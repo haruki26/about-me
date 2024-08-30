@@ -1,5 +1,3 @@
-# Read meの例(Readme.mdの内容も加点要素とします)
-
 # About Me 
 
 サイトURL: https://about-me-hazel-ten.vercel.app/
