@@ -33,7 +33,6 @@ const Root = () => {
             setIsContent("Create")
         }
 
-        window.history.replaceState(null, "", location.pathname)
         setIsDrawerState(false)
         window.scrollTo({
             top: 0,
