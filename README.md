@@ -50,3 +50,10 @@
 - できるだけコンポーネントを使い回してスタイルが崩れないようにしました。
 - Tailwind CSSを使ったので自分がしたいデザインを完全に再現できなかった。
 - 自分でスタイルを設定出来るのでいつかやってみたいです。
+
+## 使用技術
+- Vite、React、TypeScript
+- Tailwind CSS、daisyUI
+- TanStack Router
+- body-scroll-lock
+- React Icons
