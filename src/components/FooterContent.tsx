@@ -5,7 +5,7 @@ import TopBackBtn from "./footerComponents/TopBackBtn";
 
 const FooterContent: FC = () => {
     return (
-        <div className="w-full bg-slate-800 px-3 py-2">
+        <div className="w-full bg-slate-800 px-3 py-2 ">
             <div className="flex justify-center gap-1 lg:py-5">
                 <div>
                     <ContentsMenu menuSize="xs" textSize="text-xl" iconSize="1.75rem" />
@@ -15,7 +15,7 @@ const FooterContent: FC = () => {
                     <ThemeChangeBtn />
                 </div>
             </div>
-            <div className="w-full text-center py-1">
+            <div className="w-full text-center py-1 text-slate-400">
                 <small>&copy; 2024 Haruki</small>
             </div>
         </div>

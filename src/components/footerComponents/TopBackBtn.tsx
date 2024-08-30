@@ -10,8 +10,8 @@ const TopBackBtn: FC = () => {
     };
 
     return (
-        <label className="flex flex-col items-center">
-            <button className="" onClick={returnTop}>
+        <label className="flex flex-col items-center text-slate-400">
+            <button onClick={returnTop}>
                 <TiArrowUpOutline size={"2.5rem"}/>
             </button>
             <span className="font-zenKurenaido font-semibold">Page Top</span>

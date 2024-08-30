@@ -4,9 +4,9 @@ import { LuSunMedium } from "react-icons/lu";
 
 const ThemeChangeBtn: FC = () => {
     return (
-        <div className="flex flex-col gap-0.5">
+        <div className="flex flex-col gap-0.5 text-slate-400">
             <label className="swap swap-rotate">
-                <input type="checkbox" className="theme-controller" value="synthwave" />
+                <input type="checkbox" className="theme-controller" value="lemonade" />
                 <LuSunMedium className="swap-on h-10 w-10 fill-current" />
                 <FaRegMoon className="swap-off h-10 w-10 fill-current" />
             </label>

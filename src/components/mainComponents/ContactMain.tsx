@@ -36,7 +36,7 @@ const ContactMain: FC = () => {
                     <div className={`input ${isUrlColor}`}>{isUrlMessage}</div>
                 </div>
                 <div className="bg-slate-800">
-                    <form className="flex flex-col gap-4 p-3 font-kosugiMaru" onSubmit={handleSubmit}>
+                    <form className="flex flex-col gap-4 p-3 font-kosugiMaru text-slate-400" onSubmit={handleSubmit}>
                         <div className="flex flex-col gap-2">
                             <label>お名前</label>
                             <input

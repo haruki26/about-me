@@ -31,8 +31,8 @@ const Modal: FC<Props> = ({
                 <div className="w-full h-1/6 p-3">
                     <button
                     onClick={closeModalAct}
-                    className="h-full w-1/5 rounded-xl bg-slate-400/70">
-                        <span className="text-2xl text-gray-700 font-zenKurenaido font-extrabold underline md:text-3xl lg:text-5xl">Close</span>
+                    className="h-full w-1/5 rounded-xl bg-slate-400/50">
+                        <span className="text-2xl text-slate-300 font-zenKurenaido font-extrabold underline md:text-3xl lg:text-5xl">Close</span>
                     </button>
                 </div>
                 {isModalType ? (

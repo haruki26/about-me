@@ -51,6 +51,6 @@ export default {
   plugins: [daisyui],
   daisyui: {
     logs: false,
-    themes: ["dark", "synthwave"]
+    themes: ["dark", "lemonade"]
   }
 }

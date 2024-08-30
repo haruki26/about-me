@@ -24,7 +24,7 @@ const SlideShow: FC<Props> = ({images, clickImage}) => {
                 <button
                 onClick={() => handleArrowBtn(visivleImage - 1)}
                 className="h-full bg-gray-600 px-3 rounded-l-xl">
-                    <span className="text-3xl lg:5xl">{"<"}</span>
+                    <span className="text-3xl text-slate-400 lg:5xl">{"<"}</span>
                 </button>
                 <div className="w-5/6 h-full flex justify-center items-center">
                     <img src={images[visivleImage]} alt="carousel" className="m-1 h-full object-cover" />
@@ -32,7 +32,7 @@ const SlideShow: FC<Props> = ({images, clickImage}) => {
                 <button
                 onClick={() => handleArrowBtn(visivleImage + 1)}
                 className="h-full bg-gray-600 px-3 rounded-r-xl">
-                    <span className="text-3xl lg:5xl">{">"}</span>
+                    <span className="text-3xl text-slate-400 lg:5xl">{">"}</span>
                 </button>
             </div>
             <div className="w-full flex">
