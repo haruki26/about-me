@@ -1,30 +1,52 @@
-# React + TypeScript + Vite
+# Read meの例(Readme.mdの内容も加点要素とします)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# About Me 
 
-Currently, two official plugins are available:
+サイトURL: https://haruki26.github.io/about-me/
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+ポートフォリオサイトです。
+テーマはdaisyUIから好きなものを選びました。
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+# 課題の紹介
 
-- Configure the top-level `parserOptions` property like this:
+## TOP
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+- TOPはすっきりさせたかったので他ページの簡単な紹介とリンクを載せました
+- (ex:デザインのお手本は~でした。)
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## 自己紹介のページ
+
+- (ex: このページは自己紹介をするページです。)
+- (ex: 画像の収集に苦心しました）
+
+## お問い合わせ
+
+- daisyUIにブラウザのモックアップ画面がありそれが使いたかったのでここで無理矢理使いました。
+
+## その他のページ 1
+
+- (自作のページに関するこだわりポイント)
+- (コンテンツ内容に関することを記入)
+
+## その他のページ 2
+
+- 
+
+# 一番見てほしいところ
+
+- (一番見てほしいポイントを書きましょう)
+
+# 力を入れた点
+
+## 実装面
+
+- (実装に関して、力を入れた点やアピールポイントを書きましょう)
+- (こだわったポイントも書きましょう)
+- (実装で難しかった箇所を書きましょう)
+
+## デザイン面
+
+- (デザイン表現・お手本などなんでもいいので、力を入れた点やアピールポイントを書きましょう)
+- (こだわったポイントも書きましょう)
+- (デザインを形にする上で難しかった箇所を書きましょう)
