@@ -38,23 +38,30 @@ const CreateMain: FC = () => {
                     <h4 className="text-xl">GitHub PagesがSPAに対応してない</h4>
                     <p className="text-lg">
                         サイトを開くと404エラーが出ていました。
-                        <a href="https://github.com/rafgraph/spa-github-pages" className="underline">
-                            こちら
-                        </a>
-                        を参考にして解決しました。
                     </p>
+                    <div className="line-through flex flex-col gap-2">
+                        <p className="text-lg">
+                            <a href="https://github.com/rafgraph/spa-github-pages" className="underline">
+                                こちら
+                            </a>
+                            を参考にして解決しました。
+                        </p>
+                        <p className="text-lg">
+                            認証機能などを実装する予定はないので、リダイレクトのみするようにしています。
+                            TanStackRouter内でパスが一致しなくなるので
+                            <a
+                            href="https://tanstack.com/router/latest/docs/framework/react/guide/history-types#memory-routing" 
+                            className="underline">
+                                メモリールーティング
+                            </a>
+                            にする必要がありました。
+                        </p>
+                        <p className="text-lg">
+                            リダイレクトしてる関係か404ページがちらつくので気になったらVercelとかのSPA対応してるのにしたほうがはやそう。
+                        </p>
+                    </div>
                     <p className="text-lg">
-                        認証機能などを実装する予定はないので、リダイレクトのみするようにしています。
-                        TanStackRouter内でパスが一致しなくなるので
-                        <a
-                        href="https://tanstack.com/router/latest/docs/framework/react/guide/history-types#memory-routing" 
-                        className="underline">
-                            メモリールーティング
-                        </a>
-                        にする必要がありました。
-                    </p>
-                    <p className="text-lg">
-                        リダイレクトしてる関係か404ページがちらつくので気になったらVercelとかのSPA対応してるのにしたほうがはやそう。
+                        Vercelにデプロイしました。
                     </p>
                 </div>
                 <div className="flex flex-col gap-2">
