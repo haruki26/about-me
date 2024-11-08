@@ -1,6 +1,6 @@
 # About Me 
 
-サイトURL: https://about-me-hazel-ten.vercel.app/
+[サイト](https://about-me-livid-alpha.vercel.app/)
 
 ポートフォリオサイトです。
 テーマはdaisyUIから好きなものを選びました。
